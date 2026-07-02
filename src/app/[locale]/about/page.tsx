@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { buildMetadata } from '@/lib/seo';
-import { serializeSchema, webPageSchema, breadcrumbSchema, organizationSchema } from '@/lib/structured-data';
+import { serializeSchema, webPageSchema, breadcrumbSchema, organizationSchema, personSchema } from '@/lib/structured-data';
 import { siteConfig } from '@/config/site';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -40,6 +40,11 @@ export default function AboutPage() {
         id="org-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeSchema(organizationSchema()) }}
+      />
+      <script
+        id="person-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeSchema(personSchema()) }}
       />
       <script
         id="webpage-schema"

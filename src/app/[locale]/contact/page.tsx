@@ -7,7 +7,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Reveal } from '@/components/ui/Reveal';
 import { buildMetadata } from '@/lib/seo';
 import { siteConfig } from '@/config/site';
-import { serializeSchema, webPageSchema, breadcrumbSchema, faqSchema } from '@/lib/structured-data';
+import { serializeSchema, webPageSchema, breadcrumbSchema, faqSchema, localBusinessSchema } from '@/lib/structured-data';
 import { contactConfig, makeWaLink } from '@/data/contact';
 
 function InstagramIcon({ className }: { className?: string }) {
@@ -72,6 +72,11 @@ export default async function ContactPage({ params }: Props) {
 
   return (
     <>
+      <script
+        id="contact-local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeSchema(localBusinessSchema()) }}
+      />
       <script
         id="contact-webpage-schema"
         type="application/ld+json"

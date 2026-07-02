@@ -15,6 +15,8 @@ import { siteConfig } from '@/config/site';
 import {
   webPageSchema,
   breadcrumbSchema,
+  faqSchema,
+  serviceListSchema,
   serializeSchema,
 } from '@/lib/structured-data';
 
@@ -83,6 +85,81 @@ export default async function ServicesPage({ params }: Props) {
             breadcrumbSchema([
               { name: 'Home', url: siteConfig.url },
               { name: 'Services', url: pageUrl },
+            ]),
+          ),
+        }}
+      />
+      <script
+        id="services-list-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeSchema(
+            serviceListSchema([
+              {
+                name: 'Website Company Profile',
+                description:
+                  'Website profesional 5 halaman lengkap dengan domain & hosting 1 tahun, desain mobile responsive, dan SEO basic setup.',
+                url: `${siteConfig.url}/services#website`,
+              },
+              {
+                name: 'Landing Page',
+                description:
+                  'Halaman tunggal high-conversion untuk promosi, event, atau peluncuran produk — dioptimalkan untuk kecepatan dan CTA.',
+                url: `${siteConfig.url}/services#website`,
+              },
+              {
+                name: 'Website E-Commerce',
+                description:
+                  'Toko online lengkap dengan shopping cart, dashboard admin, dan integrasi payment gateway yang aman.',
+                url: `${siteConfig.url}/services#website`,
+              },
+              {
+                name: 'Creative Content',
+                description:
+                  'Desain konten media sosial dan materi branding yang dirancang untuk menarik perhatian dan mengkonversi audiens.',
+                url: `${siteConfig.url}/services#creative`,
+              },
+              {
+                name: 'Photoshoot Profesional',
+                description:
+                  'Layanan fotografi produk, portrait, dan pre-wedding berkualitas tinggi yang merepresentasikan brand secara visual.',
+                url: `${siteConfig.url}/services#photoshoot`,
+              },
+            ]),
+          ),
+        }}
+      />
+      <script
+        id="services-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeSchema(
+            faqSchema([
+              {
+                question: 'Berapa lama proses pembuatan website company profile?',
+                answer:
+                  'Website company profile standard membutuhkan 7–14 hari kerja. Landing page 5–7 hari, dan website e-commerce 14–21 hari. Durasi bisa bervariasi tergantung kompleksitas dan kecepatan feedback dari klien.',
+              },
+              {
+                question: 'Apa perbedaan website company profile dan landing page?',
+                answer:
+                  'Website company profile terdiri dari 5 halaman lengkap (Home, About, Services, Portfolio, Contact) yang cocok untuk representasi bisnis secara menyeluruh. Landing page adalah satu halaman terfokus yang dioptimalkan untuk satu tujuan konversi — promosi, event, atau peluncuran produk.',
+              },
+              {
+                question: 'Apakah layanan creative content sudah termasuk konsep dan desain?',
+                answer:
+                  'Ya. Paket creative content kami sudah mencakup riset konsep, desain, dan produksi konten siap posting. Klien cukup menyetujui arah kreatif dan kami yang eksekusi.',
+              },
+              {
+                question: 'Apa saja yang termasuk dalam paket photoshoot di Forsure Digitalindo?',
+                answer:
+                  'Paket photoshoot mencakup sesi pemotretan, editing profesional, dan file digital beresolusi tinggi. Tersedia paket Bronze, Silver, dan Gold untuk pre-wedding/pre-sweet dengan opsi lokasi dan jumlah foto yang berbeda.',
+              },
+              {
+                question: 'Apakah Forsure Digitalindo bisa membantu bisnis yang baru mulai?',
+                answer:
+                  'Tentu. Kami melayani UMKM hingga perusahaan yang ingin membangun identitas digital yang kuat. Konsultasi awal gratis — ceritakan tahap bisnis Anda dan kami akan merekomendasikan paket yang paling sesuai.',
+              },
             ]),
           ),
         }}

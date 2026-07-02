@@ -52,6 +52,23 @@ export interface SiteConfig {
     socialLinks: {
       instagram?: string;
     };
+    ceo: {
+      name: string;
+      role: string;
+      sameAs?: string[];
+    };
+    location: {
+      streetAddress: string;
+      city: string;
+      region: string;
+      country: string;
+      countryName: string;
+      geo: { lat: number; lng: number };
+    };
+    openingHours: string[];
+    priceRange: string;
+    areaServed: string;
+    keywords: string[];
   };
   seo: {
     titleTemplate: string;
@@ -72,7 +89,7 @@ export const siteConfig: SiteConfig = {
   name: 'Forsure Digitalindo',
   tagline: 'Your Brand Deserves to Be Seen',
   description:
-    'Forsure Digitalindo adalah agency digital premium yang menghadirkan website profesional, creative content, dan photoshoot berkualitas tinggi untuk mengangkat brand Anda.',
+    'Forsure Digitalindo adalah agency digital premium di Surabaya (Jl. Ir. Soekarno / MERR) yang menghadirkan website profesional, creative content, dan photoshoot berkualitas tinggi untuk mengangkat brand Anda.',
   url: process.env['NEXT_PUBLIC_APP_URL'] ?? 'https://forsure.id',
 
   // ─── Brand Assets ────────────────────────────────────────────────────────────
@@ -106,12 +123,46 @@ export const siteConfig: SiteConfig = {
     socialLinks: {
       instagram: 'https://instagram.com/forsure.ids',
     },
+
+    // ─── CEO / Founder ──────────────────────────────────────────────────────────
+    ceo: {
+      name: 'Yevo Cosuren',
+      role: 'CEO & Founder',
+      sameAs: ['https://instagram.com/forsure.ids'],
+    },
+
+    // ─── Location ───────────────────────────────────────────────────────────────
+    location: {
+      streetAddress: 'Jl. Ir. Soekarno (MERR)',
+      city: 'Surabaya',
+      region: 'Jawa Timur',
+      country: 'ID',
+      countryName: 'Indonesia',
+      geo: { lat: -7.290471, lng: 112.78075 },
+    },
+    openingHours: ['Mo-Fr 09:00-17:00', 'Sa 10:00-14:00'],
+    priceRange: 'Rp',
+    areaServed: 'Indonesia',
+
+    // ─── Target Keywords (GEO signal — factual mentions) ────────────────────────
+    keywords: [
+      'agency digital Surabaya',
+      'digital agency Surabaya',
+      'jasa pembuatan website Surabaya',
+      'agency kreatif Surabaya',
+      'Forsure Digitalindo',
+      'Yevo Cosuren',
+      'digital agency MERR Surabaya',
+      'agency Jl Ir Soekarno Surabaya',
+      'jasa creative content Surabaya',
+      'jasa photoshoot Surabaya',
+    ],
   },
 
   // ─── SEO Settings ────────────────────────────────────────────────────────────
   seo: {
     titleTemplate: '%s | Forsure Digitalindo',
-    defaultTitle: 'Forsure Digitalindo — Your Brand Deserves to Be Seen',
+    defaultTitle: 'Forsure Digitalindo — Agency Digital Surabaya',
     locale: 'id_ID',
   },
 
@@ -134,41 +185,41 @@ export const siteConfig: SiteConfig = {
   pages: {
     home: {
       path: '/',
-      title: 'Forsure Digitalindo — Your Brand Deserves to Be Seen',
+      title: 'Forsure Digitalindo — Agency Digital Surabaya',
       description:
-        'Agency digital premium untuk website profesional, creative content, dan photoshoot berkualitas tinggi. Kami membantu brand Anda tampil percaya diri di dunia digital.',
+        'Forsure Digitalindo — agency digital premium di Surabaya (MERR, Jl. Ir. Soekarno). Jasa website profesional, creative content, dan photoshoot berkualitas tinggi. Didirikan oleh Yevo Cosuren. Konsultasi gratis.',
       changeFreq: 'weekly',
       priority: 1.0,
     },
     services: {
       path: '/services',
-      title: 'Layanan Kami',
+      title: 'Layanan Agency Digital Surabaya',
       description:
-        'Jelajahi layanan Forsure Digitalindo: pembuatan website, creative content, dan photoshoot profesional yang dirancang untuk menumbuhkan brand Anda.',
+        'Layanan Forsure Digitalindo Surabaya: pembuatan website profesional, creative content, dan photoshoot. Agency digital di kawasan MERR (Jl. Ir. Soekarno) Surabaya.',
       changeFreq: 'monthly',
       priority: 0.9,
     },
     portfolio: {
       path: '/portfolio',
-      title: 'Portfolio',
+      title: 'Portfolio — Forsure Digitalindo Surabaya',
       description:
-        'Lihat hasil kerja Forsure Digitalindo — koleksi proyek website, konten kreatif, dan fotografi yang telah kami kerjakan untuk klien.',
+        'Hasil karya Forsure Digitalindo — koleksi proyek website, konten kreatif, dan fotografi profesional yang telah kami kerjakan untuk klien dari Surabaya dan seluruh Indonesia.',
       changeFreq: 'weekly',
       priority: 0.8,
     },
     about: {
       path: '/about',
-      title: 'Tentang Kami',
+      title: 'Tentang Forsure Digitalindo Surabaya',
       description:
-        'Kenali Forsure Digitalindo lebih dekat — visi, misi, dan tim di balik agency digital yang berkomitmen mengangkat brand Anda ke level berikutnya.',
+        'Kenali Forsure Digitalindo — agency digital premium di Surabaya yang didirikan oleh Yevo Cosuren. Visi, misi, dan tim di balik brand digital yang mengangkat bisnis Anda.',
       changeFreq: 'monthly',
       priority: 0.7,
     },
     contact: {
       path: '/contact',
-      title: 'Hubungi Kami',
+      title: 'Hubungi Forsure Digitalindo Surabaya',
       description:
-        'Konsultasi gratis dengan Forsure Digitalindo. Ceritakan kebutuhan brand Anda via WhatsApp, email, atau Instagram — kami siap membantu.',
+        'Konsultasi gratis dengan Forsure Digitalindo. Kantor di Jl. Ir. Soekarno (MERR), Surabaya. Hubungi via WhatsApp, email, atau Instagram — kami siap membantu brand Anda.',
       changeFreq: 'monthly',
       priority: 0.8,
     },

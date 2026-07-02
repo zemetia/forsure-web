@@ -24,7 +24,7 @@ interface WithContext<T> {
 
 /** Organization schema — attach once in the root layout or home page. */
 export function organizationSchema(): WithContext<unknown> {
-  const { company, name, url, ogImage } = siteConfig;
+  const { company, name, url, ogImage, contact } = siteConfig;
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -37,8 +37,123 @@ export function organizationSchema(): WithContext<unknown> {
     },
     foundingDate: String(company.foundedYear),
     email: company.contactEmail,
+    telephone: contact.phone,
     description: siteConfig.description,
+    areaServed: company.areaServed,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: contact.phone,
+      contactType: 'customer service',
+      availableLanguage: 'Indonesian',
+      contactOption: 'TollFree',
+    },
+    founder: {
+      '@type': 'Person',
+      name: company.ceo.name,
+      jobTitle: company.ceo.role,
+    },
+    employee: {
+      '@type': 'Person',
+      name: company.ceo.name,
+      jobTitle: company.ceo.role,
+    },
     sameAs: Object.values(company.socialLinks).filter(Boolean),
+  };
+}
+
+/**
+ * LocalBusiness schema — use on home + contact pages.
+ * Enables Google local knowledge panel, Maps integration, and AI overview citations.
+ */
+export function localBusinessSchema(): WithContext<unknown> {
+  const { company, name, url, ogImage, contact } = siteConfig;
+  const { location } = company;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: company.legalName,
+    alternateName: name,
+    url,
+    logo: `${url}${ogImage}`,
+    image: `${url}${ogImage}`,
+    description: siteConfig.description,
+    telephone: contact.phone,
+    email: company.contactEmail,
+    foundingDate: String(company.foundedYear),
+    founder: {
+      '@type': 'Person',
+      name: company.ceo.name,
+      jobTitle: company.ceo.role,
+      worksFor: { '@type': 'Organization', name: company.legalName },
+      ...(company.ceo.sameAs ? { sameAs: company.ceo.sameAs } : {}),
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: location.streetAddress,
+      addressLocality: location.city,
+      addressRegion: location.region,
+      addressCountry: location.country,
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: location.geo.lat,
+      longitude: location.geo.lng,
+    },
+    openingHours: company.openingHours,
+    priceRange: company.priceRange,
+    areaServed: company.areaServed,
+    hasMap: `https://maps.google.com/?q=${location.geo.lat},${location.geo.lng}`,
+    sameAs: Object.values(company.socialLinks).filter(Boolean),
+  };
+}
+
+/** Person schema — for CEO/founder. Helps Google build a Knowledge Panel for the person. */
+export function personSchema(): WithContext<unknown> {
+  const { company, url } = siteConfig;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: company.ceo.name,
+    jobTitle: company.ceo.role,
+    worksFor: {
+      '@type': 'Organization',
+      name: company.legalName,
+      url,
+    },
+    url,
+    ...(company.ceo.sameAs ? { sameAs: company.ceo.sameAs } : {}),
+  };
+}
+
+export interface ServiceListItem {
+  name: string;
+  description: string;
+  url: string;
+}
+
+/** ItemList schema for a services page — lets AI overviews enumerate your offerings. */
+export function serviceListSchema(services: ServiceListItem[]): WithContext<unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `Layanan ${siteConfig.name}`,
+    description: siteConfig.pages['services']?.description ?? siteConfig.description,
+    url: `${siteConfig.url}/services`,
+    itemListElement: services.map((svc, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Service',
+        name: svc.name,
+        description: svc.description,
+        url: svc.url,
+        provider: {
+          '@type': 'Organization',
+          name: siteConfig.company.legalName,
+          url: siteConfig.url,
+        },
+      },
+    })),
   };
 }
 
@@ -62,7 +177,7 @@ export function webPageSchema(opts: WebPageSchemaOptions): WithContext<unknown> 
     isPartOf: { '@type': 'WebSite', url: siteConfig.url, name: siteConfig.name },
     ...(opts.datePublished ? { datePublished: opts.datePublished } : {}),
     ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
-    inLanguage: 'en',
+    inLanguage: 'id',
   };
 }
 
