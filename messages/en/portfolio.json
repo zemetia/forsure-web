@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Portfolio",
+    "description": "Browse Forsure Digitalindo's portfolio — websites, creative content, and professional photoshoots that elevate brands."
+  },
+  "hero": {
+    "eyebrow": "Our Work",
+    "headline": "Projects We're\nProud Of",
+    "subheadline": "Every project is a story — here are some of our favorites."
+  },
+  "filter": {
+    "all": "All",
+    "website": "Website",
+    "creative": "Creative Content",
+    "photoshoot": "Photoshoot"
+  },
+  "card": {
+    "viewProject": "View Project",
+    "client": "Client"
+  },
+  "empty": "No projects in this category yet. Check back soon!",
+  "cta": {
+    "heading": "Like What You See?",
+    "subheading": "Let's create something great for your brand.",
+    "button": "Start a Project"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "eyebrow": "Tentang Kami",
+    "headline": "Kami Membantu Brand\nAnda Layak untuk Dilihat.",
+    "subheadline": "Tim kreatif yang membantu brand Anda tampil profesional di dunia digital.",
+    "cta": "Kenali Tim Kami"
+  },
+  "story": {
+    "eyebrow": "Cerita Kami",
+    "headline": "Forsure Digitalindo",
+    "body": "Forsure Digitalindo memberdayakan bisnis dengan kehadiran digital profesional melalui website strategis, branding, konten digital, dan photoshoot berkualitas tinggi yang disesuaikan dengan lanskap bisnis masa kini."
+  },
+  "pillars": {
+    "eyebrow": "Nilai yang Kami Pegang",
+    "headline": "Tiga Pilar Utama Kami",
+    "creative_title": "Creative",
+    "creative_desc": "Merancang desain dan konten yang memukau secara visual — menangkap perhatian dan menceritakan kisah brand Anda.",
+    "strategy_title": "Strategy",
+    "strategy_desc": "Membangun kehadiran digital yang bermakna — setiap keputusan selaras dengan tujuan bisnis Anda.",
+    "impact_title": "Digital Impact",
+    "impact_desc": "Menghasilkan dampak nyata yang menumbuhkan brand Anda di setiap kanal digital."
+  },
+  "vision": {
+    "eyebrow": "Visi & Misi",
+    "vision_title": "Visi Kami",
+    "vision_text": "Menjadikan digital marketing sebagai jembatan agar brand lokal bisa bersaing dan tumbuh di pasar yang lebih luas.",
+    "mission_title": "Misi Kami",
+    "mission_1": "Menghadirkan edukasi dan literasi digital yang dapat menjangkau semua generasi, dari Gen Z hingga Baby Boomers.",
+    "mission_2": "Membantu brand lokal bertransformasi ke ekosistem digital secara lebih luas dan berdampak nyata.",
+    "mission_3": "Menciptakan nilai melalui inovasi, kolaborasi, dan kreativitas di setiap layanan yang kami hadirkan.",
+    "mission_4": "Membuka ruang tumbuh bagi generasi muda di industri kreatif dan digital Indonesia."
+  },
+  "ceo": {
+    "eyebrow": "Kata Sambutan",
+    "greeting": "Halo, saya Yevo Cosuren, Founder & CEO Forsure Digitalindo.",
+    "p1": "Di tengah pasar yang semakin kompetitif, satu hal yang kami yakini: brand yang kuat bukan hanya soal produk yang bagus, tapi soal siapa yang mendengar ceritamu.",
+    "p2": "Kami hadir untuk memastikan cerita itu sampai ke audiens yang tepat. Lewat strategi press release dan penempatan media di platform-platform besar seperti Kompas, Liputan6, dan Jawa Pos, hingga pembuatan website profesional, manajemen media sosial, foto produk, video konten, dan photoshoot, kami menyediakan semua yang dibutuhkan brand Anda untuk tumbuh dan tampil percaya diri.",
+    "p3": "Selamat datang di Forsure Digitalindo, mari kita bangun brand Anda bersama.",
+    "name": "Yevo Cosuren",
+    "role": "Founder & CEO, Forsure Digitalindo"
+  },
+  "team": {
+    "eyebrow": "Orang-Orang di Balik Karya",
+    "headline": "Tim Kami"
+  },
+  "cta": {
+    "headline": "Tertarik Bekerja Sama dengan Kami?",
+    "subheadline": "Kami siap membantu brand Anda tampil lebih kuat.",
+    "contact": "Hubungi Kami",
+    "services": "Lihat Layanan"
+  }
+}

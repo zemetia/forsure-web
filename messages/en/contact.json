@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Contact Us",
+    "description": "Get in touch with Forsure Digitalindo. Free consultation, no commitment. WhatsApp, email, or Instagram."
+  },
+  "hero": {
+    "eyebrow": "Contact Us",
+    "headline": "Let's Talk About\nYour Brand",
+    "subheadline": "Free consultation. No commitment. Tell us about your brand and we'll get back to you fast."
+  },
+  "channels": {
+    "heading": "Reach Us On",
+    "whatsapp": "Chat via WhatsApp",
+    "whatsappSub": "Fastest response — usually within 1 hour",
+    "email": "Send an Email",
+    "emailSub": "Response within 1 business day",
+    "instagram": "Follow on Instagram",
+    "instagramSub": "See our latest work & stories"
+  },
+  "hours": {
+    "heading": "Office Hours"
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions"
+  },
+  "cta": {
+    "heading": "Ready to Start?",
+    "subheading": "One message is all it takes. We'll handle the rest.",
+    "button": "WhatsApp Now"
+  }
+}

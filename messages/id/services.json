@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Layanan Kami",
+    "description": "Jelajahi layanan lengkap Forsure Digitalindo: pembuatan website profesional, manajemen konten kreatif, dan photoshoot berkualitas tinggi — semua yang dibutuhkan brand Anda."
+  },
+  "hero": {
+    "heading": "Layanan Kami",
+    "subheading": "Semua yang dibutuhkan brand Anda untuk berkembang secara digital.",
+    "cta": "Jelajahi Semua Layanan"
+  },
+  "filter": {
+    "website": "Website Solutions",
+    "creative": "Creative Content",
+    "photoshoot": "Photoshoot"
+  },
+  "sections": {
+    "website": {
+      "title": "Website Solutions",
+      "subtitle": "Website profesional yang dibangun untuk mengkonversi pengunjung menjadi klien."
+    },
+    "creative": {
+      "title": "Creative Content Services",
+      "subtitle": "Konten kreatif yang dirancang untuk suara brand Anda."
+    },
+    "photoshoot": {
+      "title": "Photoshoot Profesional",
+      "subtitle": "Visual berkualitas tinggi yang merepresentasikan brand Anda dengan percaya diri."
+    }
+  },
+  "card": {
+    "cta": "Tanya Harga"
+  },
+  "cta": {
+    "heading": "Siap Membangun Brand Digital Anda?",
+    "subheading": "Hubungi kami dan mulai perjalanan bersama Forsure Digitalindo.",
+    "whatsapp": "WhatsApp Sekarang",
+    "portfolio": "Lihat Portfolio"
+  }
+}

@@ -1,64 +1,85 @@
 import type { Metadata } from 'next';
 
-import { Typography } from '@/components/ui/Typography';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Header } from '@/components/layout/Header';
+import { buildMetadata } from '@/lib/seo';
+import { serializeSchema, webPageSchema, breadcrumbSchema, organizationSchema } from '@/lib/structured-data';
+import { siteConfig } from '@/config/site';
+import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
+import { AboutHero } from '@/components/sections/about/AboutHero';
+import { OurStory } from '@/components/sections/about/OurStory';
+import { OurPillars } from '@/components/sections/about/OurPillars';
+import { VisionMission } from '@/components/sections/about/VisionMission';
+import { CEOGreeting } from '@/components/sections/about/CEOGreeting';
+import { OurTeam } from '@/components/sections/about/OurTeam';
+import { AboutCTA } from '@/components/sections/about/AboutCTA';
+import { ClientMarquee } from '@/components/sections/landing/ClientMarquee';
+import { OurPartners } from '@/components/sections/landing/OurPartners';
+import { LocationMap } from '@/components/sections/landing/LocationMap';
 
-export const metadata: Metadata = {
-  title: 'About',
-};
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const page = siteConfig.pages['about'];
+  return buildMetadata({
+    title: page?.title,
+    description: page?.description,
+    path: '/about',
+    locale,
+  });
+}
 
 export default function AboutPage() {
+  const page = siteConfig.pages['about'];
+
   return (
     <>
-      <Header />
-      <main className="container-page py-16">
-        <Typography variant="h1" className="mb-4">
-          About This Template
-        </Typography>
-        <Typography variant="lead" className="mb-12 text-foreground-muted">
-          A strict, opinionated starting point for production Next.js applications.
-        </Typography>
+      <script
+        id="org-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeSchema(organizationSchema()) }}
+      />
+      <script
+        id="webpage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeSchema(
+            webPageSchema({
+              name: page?.title ?? 'About Us',
+              description: page?.description ?? siteConfig.description,
+              url: `${siteConfig.url}/about`,
+              datePublished: '2024-01-01',
+            }),
+          ),
+        }}
+      />
+      <script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeSchema(
+            breadcrumbSchema([
+              { name: 'Home', url: siteConfig.url },
+              { name: 'About Us', url: `${siteConfig.url}/about` },
+            ]),
+          ),
+        }}
+      />
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <Card>
-            <CardHeader>
-              <CardTitle>Structure</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Typography variant="muted" className="font-mono text-xs leading-relaxed">
-                {`src/
-  app/          ← App Router pages
-  components/
-    ui/         ← Primitive components
-    layout/     ← Header, Footer
-    shared/     ← Cross-feature components
-  hooks/        ← Custom React hooks
-  i18n/         ← Routing + request config
-  lib/          ← cn(), utils
-  services/     ← API client + services
-  stores/       ← Zustand stores
-  types/        ← Shared TypeScript types`}
-              </Typography>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Component Convention</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <Typography variant="muted" className="font-mono text-xs leading-relaxed">
-                {`ComponentName/
-  ComponentName.tsx      ← Implementation
-  ComponentName.stories  ← Storybook
-  ComponentName.test     ← Vitest + RTL
-  index.ts               ← Named re-export`}
-              </Typography>
-            </CardContent>
-          </Card>
-        </div>
+      <Navbar />
+      <main>
+        <AboutHero />
+        <OurStory />
+        <OurPillars />
+        <VisionMission />
+        <CEOGreeting />
+        <OurTeam />
+        <ClientMarquee />
+        <OurPartners />
+        <AboutCTA />
+        <LocationMap />
       </main>
       <Footer />
     </>

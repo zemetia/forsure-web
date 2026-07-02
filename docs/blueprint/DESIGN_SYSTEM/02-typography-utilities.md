@@ -33,13 +33,17 @@ Fonts loaded via `next/font/google` in `src/app/[locale]/layout.tsx`, injected a
 | CSS variable | Font family | Weights | Utility |
 |---|---|---|---|
 | `--font-outfit` | Outfit | 300–800 | `font-sans` — all body + UI text |
+| `--font-cormorant` | Cormorant Garamond | 300–600 (normal + italic) | `font-display` — hero headings, display text |
 | `--font-jetbrains-mono` | JetBrains Mono | 400–600 | `font-mono` — code, monospace data |
 
 `@theme` mapping:
 ```css
 --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+--font-display: var(--font-cormorant), 'Garamond', Georgia, serif;
 --font-mono: var(--font-jetbrains-mono), ui-monospace, "Cascadia Code", monospace;
 ```
+
+**Usage rule** — `font-display` (Cormorant Garamond) is for hero/display headings only: page titles, section taglines, large pull-quotes. Use `font-sans` (Outfit) for all navigation, body, UI labels, and small headings. Never mix both at the same size.
 
 ### Typography component ([src/components/ui/Typography/](../../../src/components/ui/Typography/))
 

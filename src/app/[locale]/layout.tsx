@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
-import { JetBrains_Mono, Outfit } from 'next/font/google';
+import { Cormorant_Garamond, JetBrains_Mono, Outfit } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 
 import { routing } from '@/i18n/routing';
 import type { Locale } from '@/i18n/routing';
+import { buildMetadata } from '@/lib/seo';
 import { Toaster } from '@/components/ui/Sonner';
 import { PostHogProvider } from '@/providers';
+import { FloatingWhatsApp } from '@/components/ui/FloatingWhatsApp';
 
 import '../globals.css';
 
@@ -16,6 +18,14 @@ const outfit = Outfit({
   variable: '--font-outfit',
   display: 'swap',
   weight: ['300', '400', '500', '600', '700', '800'],
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  display: 'swap',
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -32,16 +42,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'home.meta' });
-
-  return {
-    title: {
-      template: `%s | ${t('title')}`,
-      default: t('title'),
-    },
-    description: t('description'),
-    metadataBase: new URL(process.env['NEXT_PUBLIC_APP_URL'] ?? 'http://localhost:3000'),
-  };
+  return buildMetadata({ path: '/', locale });
 }
 
 export function generateStaticParams() {
@@ -60,7 +61,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${outfit.variable} ${jetbrainsMono.variable}`}
+      className={`${outfit.variable} ${jetbrainsMono.variable} ${cormorantGaramond.variable}`}
       suppressHydrationWarning
     >
       <body>
@@ -68,6 +69,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <PostHogProvider>
             {children}
           </PostHogProvider>
+          <FloatingWhatsApp />
           <Toaster />
         </NextIntlClientProvider>
       </body>

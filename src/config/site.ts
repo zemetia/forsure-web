@@ -23,12 +23,23 @@ export interface PageConfig {
   priority: number;
 }
 
+export interface FooterLinkItem {
+  label: string;
+  href: string;
+}
+
 export interface SiteConfig {
   name: string;
   tagline: string;
   description: string;
   url: string;
   ogImage: string;
+  contact: {
+    phone: string;
+    email: string;
+    instagram: string;
+    instagramHandle: string;
+  };
   company: {
     legalName: string;
     foundedYear: number;
@@ -39,9 +50,7 @@ export interface SiteConfig {
     keyBenefits: string[];
     contactEmail: string;
     socialLinks: {
-      twitter?: string;
-      github?: string;
-      linkedin?: string;
+      instagram?: string;
     };
   };
   seo: {
@@ -50,70 +59,116 @@ export interface SiteConfig {
     twitterHandle?: string;
     locale: string;
   };
+  footerLinks: {
+    pages: FooterLinkItem[];
+    services: FooterLinkItem[];
+  };
   /** Registry of all public pages — drives sitemap + LLMs.txt page index */
   pages: Record<string, PageConfig>;
 }
 
 export const siteConfig: SiteConfig = {
   // ─── Core Identity ───────────────────────────────────────────────────────────
-  name: 'My Product',
-  tagline: 'One sentence that nails the value proposition.',
+  name: 'Forsure Digitalindo',
+  tagline: 'Your Brand Deserves to Be Seen',
   description:
-    'Two-sentence pitch: what the product does, who it is for, and what makes it different from alternatives.',
-  url: process.env['NEXT_PUBLIC_APP_URL'] ?? 'https://example.com',
+    'Forsure Digitalindo adalah agency digital premium yang menghadirkan website profesional, creative content, dan photoshoot berkualitas tinggi untuk mengangkat brand Anda.',
+  url: process.env['NEXT_PUBLIC_APP_URL'] ?? 'https://forsure.id',
 
   // ─── Brand Assets ────────────────────────────────────────────────────────────
-  ogImage: '/og.png',
+  ogImage: '/og',
+
+  // ─── Contact ─────────────────────────────────────────────────────────────────
+  contact: {
+    phone: '+62 897-0297-969',
+    email: 'forsure.digitalindo@gmail.com',
+    instagram: 'https://instagram.com/forsure.ids',
+    instagramHandle: '@forsure.ids',
+  },
 
   // ─── Company Details (drives Organization schema + LLMs.txt) ─────────────────
   company: {
-    legalName: 'My Company, Inc.',
+    legalName: 'Forsure Digitalindo',
     foundedYear: 2024,
-    industry: 'Software / SaaS',
+    industry: 'Digital Agency',
     targetAudience:
-      'Developers and product teams building modern web applications who need …',
+      'Bisnis dan brand yang ingin tampil profesional secara digital — dari UMKM hingga perusahaan yang membutuhkan identitas digital yang kuat.',
     problemSolved:
-      'Most teams waste weeks bootstrapping the same infrastructure decisions — auth, state, i18n, design system — before they can ship any real product value.',
+      'Banyak bisnis yang kesulitan membangun kehadiran digital yang konsisten dan berdampak tanpa tim internal yang memadai.',
     solution:
-      'My Product is a production-ready Next.js template with every architectural decision pre-made, documented, and tested, so teams can ship features from day one.',
+      'Forsure Digitalindo menyediakan layanan website, creative content, dan photoshoot profesional dalam satu agency — sehingga brand Anda tampil kohesif dan berkesan.',
     keyBenefits: [
-      'Zero config — works out of the box with TypeScript, Tailwind v4, and next-intl',
-      'Opinionated patterns that scale — CVA components, Zustand stores, Zod validation',
-      'AI-agent friendly — every pattern is documented in machine-readable blueprint docs',
+      'Website profesional yang dibangun dengan teknologi modern dan SEO-ready',
+      'Creative content yang dirancang untuk menarik perhatian dan mengkonversi audiens',
+      'Photoshoot berkualitas tinggi yang merepresentasikan brand secara visual',
     ],
-    contactEmail: 'contact@example.com',
+    contactEmail: 'forsure.digitalindo@gmail.com',
     socialLinks: {
-      twitter: 'https://twitter.com/handle',
-      github: 'https://github.com/org/repo',
-      linkedin: 'https://linkedin.com/company/my-company',
+      instagram: 'https://instagram.com/forsure.ids',
     },
   },
 
   // ─── SEO Settings ────────────────────────────────────────────────────────────
   seo: {
-    titleTemplate: '%s | My Product',
-    defaultTitle: 'My Product — One sentence value prop',
-    twitterHandle: '@handle',
-    locale: 'en_US',
+    titleTemplate: '%s | Forsure Digitalindo',
+    defaultTitle: 'Forsure Digitalindo — Your Brand Deserves to Be Seen',
+    locale: 'id_ID',
+  },
+
+  // ─── Footer Links ─────────────────────────────────────────────────────────────
+  footerLinks: {
+    pages: [
+      { label: 'Home', href: '/' },
+      { label: 'Services', href: '/services' },
+      { label: 'Portfolio', href: '/portfolio' },
+      { label: 'About Us', href: '/about' },
+    ],
+    services: [
+      { label: 'Website Solutions', href: '/services#website' },
+      { label: 'Creative Content', href: '/services#creative' },
+      { label: 'Photoshoot', href: '/services#photoshoot' },
+    ],
   },
 
   // ─── Pages Registry ──────────────────────────────────────────────────────────
-  // Add a new entry here every time you create a new public page.
-  // Path is locale-stripped (the sitemap helper adds locale prefixes).
   pages: {
     home: {
       path: '/',
-      title: 'My Product — One sentence value prop',
+      title: 'Forsure Digitalindo — Your Brand Deserves to Be Seen',
       description:
-        'My Product is a production-ready Next.js 16 template. Ship features from day one with TypeScript, Tailwind v4, next-intl, Zustand, and full SEO / GEO / LLMs.txt support.',
+        'Agency digital premium untuk website profesional, creative content, dan photoshoot berkualitas tinggi. Kami membantu brand Anda tampil percaya diri di dunia digital.',
       changeFreq: 'weekly',
       priority: 1.0,
     },
+    services: {
+      path: '/services',
+      title: 'Layanan Kami',
+      description:
+        'Jelajahi layanan Forsure Digitalindo: pembuatan website, creative content, dan photoshoot profesional yang dirancang untuk menumbuhkan brand Anda.',
+      changeFreq: 'monthly',
+      priority: 0.9,
+    },
+    portfolio: {
+      path: '/portfolio',
+      title: 'Portfolio',
+      description:
+        'Lihat hasil kerja Forsure Digitalindo — koleksi proyek website, konten kreatif, dan fotografi yang telah kami kerjakan untuk klien.',
+      changeFreq: 'weekly',
+      priority: 0.8,
+    },
     about: {
       path: '/about',
-      title: 'About My Product',
+      title: 'Tentang Kami',
       description:
-        'Learn the story, team, and mission behind My Product — the opinionated Next.js template built for teams who want to skip the boilerplate and focus on shipping.',
+        'Kenali Forsure Digitalindo lebih dekat — visi, misi, dan tim di balik agency digital yang berkomitmen mengangkat brand Anda ke level berikutnya.',
+      changeFreq: 'monthly',
+      priority: 0.7,
+    },
+    contact: {
+      path: '/contact',
+      title: 'Hubungi Kami',
+      description:
+        'Konsultasi gratis dengan Forsure Digitalindo. Ceritakan kebutuhan brand Anda via WhatsApp, email, atau Instagram — kami siap membantu.',
       changeFreq: 'monthly',
       priority: 0.8,
     },

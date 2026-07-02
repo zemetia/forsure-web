@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Rina Kusumawati",
+    "businessName": "Butik Rina Official",
+    "photo": "",
+    "rating": 5,
+    "text": "Forsure benar-benar mengubah tampilan online toko kami. Website baru kami terlihat sangat profesional dan pelanggan sering memuji tampilannya. Proses kerja mereka cepat dan komunikasinya sangat jelas.",
+    "service": "Website Company Profile"
+  },
+  {
+    "id": "2",
+    "name": "Dimas Prasetyo",
+    "businessName": "Kopi Nusantara",
+    "photo": "",
+    "rating": 5,
+    "text": "Foto produk yang Forsure hasilkan luar biasa! Penjualan online kami meningkat signifikan setelah ganti foto produk. Tim mereka sangat profesional dan paham kebutuhan brand kami.",
+    "service": "Photoshoot Produk"
+  },
+  {
+    "id": "3",
+    "name": "Sarah Amelia",
+    "businessName": "Studio Belajar Sarah",
+    "photo": "",
+    "rating": 5,
+    "text": "Konten sosial media yang Forsure buat untuk kami benar-benar berbeda — elegan, konsisten, dan engagement meningkat drastis. Sangat merekomendasikan layanan creative content mereka!",
+    "service": "Creative Content & Social Media"
+  }
+]

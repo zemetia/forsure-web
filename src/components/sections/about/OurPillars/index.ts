@@ -1,0 +1,1 @@
+export { OurPillars } from './OurPillars';

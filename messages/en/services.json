@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Our Services",
+    "description": "Explore Forsure Digitalindo's full range of services: professional websites, creative content management, and high-quality photoshoots — everything your brand needs."
+  },
+  "hero": {
+    "heading": "Our Services",
+    "subheading": "Everything your brand needs to grow digitally.",
+    "cta": "Explore All Services"
+  },
+  "filter": {
+    "website": "Website Solutions",
+    "creative": "Creative Content",
+    "photoshoot": "Photoshoot"
+  },
+  "sections": {
+    "website": {
+      "title": "Website Solutions",
+      "subtitle": "Professional websites built to convert visitors into clients."
+    },
+    "creative": {
+      "title": "Creative Content Services",
+      "subtitle": "Scroll-stopping content crafted for your brand's voice."
+    },
+    "photoshoot": {
+      "title": "Professional Photoshoot",
+      "subtitle": "High-quality visuals that represent your brand with confidence."
+    }
+  },
+  "card": {
+    "cta": "Inquire About Pricing"
+  },
+  "cta": {
+    "heading": "Ready to Build Your Digital Brand?",
+    "subheading": "Contact us and start your journey with Forsure Digitalindo.",
+    "whatsapp": "WhatsApp Now",
+    "portfolio": "View Portfolio"
+  }
+}

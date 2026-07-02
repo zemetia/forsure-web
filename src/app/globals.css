@@ -3,33 +3,34 @@
 @theme {
   /* ─── Typography ─────────────────────────────────────────────── */
   --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cormorant), 'Garamond', Georgia, serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, "Cascadia Code", monospace;
 
   /* ─── Brand / Semantic Colors (oklch for wide-gamut) ─────────── */
 
-  /* Surface */
-  --color-background: oklch(0.073 0.018 264);
-  --color-surface: oklch(0.1 0.018 264);
-  --color-surface-raised: oklch(0.13 0.016 264);
-  --color-surface-overlay: oklch(0.17 0.014 264);
+  /* Surface — pure neutral black, no hue tint */
+  --color-background: oklch(0.073 0 0);
+  --color-surface: oklch(0.1 0 0);
+  --color-surface-raised: oklch(0.13 0 0);
+  --color-surface-overlay: oklch(0.17 0 0);
 
-  /* Text */
-  --color-foreground: oklch(0.962 0.006 264);
-  --color-foreground-muted: oklch(0.62 0.018 264);
-  --color-foreground-subtle: oklch(0.42 0.014 264);
+  /* Text — silver scale */
+  --color-foreground: oklch(0.82 0 0);
+  --color-foreground-muted: oklch(0.52 0 0);
+  --color-foreground-subtle: oklch(0.35 0 0);
 
-  /* Border */
-  --color-border: oklch(0.22 0.016 264);
-  --color-border-strong: oklch(0.32 0.018 264);
-  --color-input: oklch(0.22 0.016 264);
+  /* Border — neutral dark */
+  --color-border: oklch(0.2 0 0);
+  --color-border-strong: oklch(0.28 0 0);
+  --color-input: oklch(0.2 0 0);
 
-  /* Primary — electric blue */
-  --color-primary: oklch(0.623 0.214 259.8);
-  --color-primary-hover: oklch(0.56 0.214 259.8);
-  --color-primary-active: oklch(0.5 0.2 259.8);
-  --color-primary-foreground: oklch(0.98 0.004 260);
-  --color-primary-subtle: oklch(0.623 0.214 259.8 / 0.12);
-  --color-primary-glow: oklch(0.623 0.214 259.8 / 0.35);
+  /* Primary — gold */
+  --color-primary: oklch(0.768 0.131 83.5);
+  --color-primary-hover: oklch(0.70 0.128 83.5);
+  --color-primary-active: oklch(0.63 0.122 83.5);
+  --color-primary-foreground: oklch(0.065 0 0);
+  --color-primary-subtle: oklch(0.768 0.131 83.5 / 0.12);
+  --color-primary-glow: oklch(0.768 0.131 83.5 / 0.35);
 
   /* Destructive */
   --color-destructive: oklch(0.577 0.245 27.3);
@@ -50,37 +51,37 @@
   --color-warning-subtle: oklch(0.769 0.188 70.1 / 0.12);
 
   /* Card */
-  --color-card: oklch(0.1 0.018 264);
-  --color-card-foreground: oklch(0.962 0.006 264);
+  --color-card: oklch(0.1 0 0);
+  --color-card-foreground: oklch(0.82 0 0);
 
-  /* Focus ring */
-  --color-ring: oklch(0.623 0.214 259.8);
+  /* Focus ring — gold */
+  --color-ring: oklch(0.768 0.131 83.5);
 
   /* ─── shadcn/ui semantic aliases ────────────────────────────────
      These mirror the tokens above so shadcn-generated components
      (popover, secondary, muted, accent, sidebar) work without
      any extra configuration.                                       */
 
-  --color-popover: oklch(0.1 0.018 264);
-  --color-popover-foreground: oklch(0.962 0.006 264);
+  --color-popover: oklch(0.1 0 0);
+  --color-popover-foreground: oklch(0.82 0 0);
 
-  --color-secondary: oklch(0.13 0.016 264);
-  --color-secondary-foreground: oklch(0.962 0.006 264);
+  --color-secondary: oklch(0.13 0 0);
+  --color-secondary-foreground: oklch(0.82 0 0);
 
-  --color-muted: oklch(0.13 0.016 264);
-  --color-muted-foreground: oklch(0.62 0.018 264);
+  --color-muted: oklch(0.13 0 0);
+  --color-muted-foreground: oklch(0.52 0 0);
 
-  --color-accent: oklch(0.623 0.214 259.8 / 0.12);
-  --color-accent-foreground: oklch(0.962 0.006 264);
+  --color-accent: oklch(0.768 0.131 83.5 / 0.12);
+  --color-accent-foreground: oklch(0.82 0 0);
 
-  --color-sidebar: oklch(0.1 0.018 264);
-  --color-sidebar-foreground: oklch(0.962 0.006 264);
-  --color-sidebar-primary: oklch(0.623 0.214 259.8);
-  --color-sidebar-primary-foreground: oklch(0.98 0.004 260);
-  --color-sidebar-accent: oklch(0.13 0.016 264);
-  --color-sidebar-accent-foreground: oklch(0.962 0.006 264);
-  --color-sidebar-border: oklch(0.22 0.016 264);
-  --color-sidebar-ring: oklch(0.623 0.214 259.8);
+  --color-sidebar: oklch(0.1 0 0);
+  --color-sidebar-foreground: oklch(0.82 0 0);
+  --color-sidebar-primary: oklch(0.768 0.131 83.5);
+  --color-sidebar-primary-foreground: oklch(0.065 0 0);
+  --color-sidebar-accent: oklch(0.13 0 0);
+  --color-sidebar-accent-foreground: oklch(0.82 0 0);
+  --color-sidebar-border: oklch(0.2 0 0);
+  --color-sidebar-ring: oklch(0.768 0.131 83.5);
 
   /* ─── Radius ──────────────────────────────────────────────────── */
   --radius-xs: 0.25rem;
@@ -124,6 +125,112 @@
   }
 }
 
+/* ─── Animation Keyframes ─────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-fade-in,
+  .animate-fade-in-right {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ─── Additional Keyframes ────────────────────────────────────── */
+@keyframes bounce-y {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+.animate-bounce-y {
+  animation: bounce-y 1.8s ease-in-out infinite;
+}
+
+/* ─── Marquee ─────────────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [style*="animation: marquee"],
+  [style*="animation: marquee-reverse"] {
+    animation: none !important;
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 5s 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-bounce-y,
+  .animate-float,
+  .animate-float-delayed {
+    animation: none !important;
+  }
+}
+
+/* ─── Light Section ───────────────────────────────────────────── */
+/*
+  Drop .section-light onto any <section> to flip into the cream/light
+  palette. All child components that consume CSS tokens automatically
+  adapt — no extra class needed inside.
+*/
+.section-light {
+  /* Surface */
+  --color-background:     oklch(0.97 0.004 85);
+  --color-surface:        oklch(0.93 0.005 85);
+  --color-surface-raised: oklch(0.88 0.007 85);
+  --color-surface-overlay:oklch(0.83 0.009 85);
+
+  /* Text */
+  --color-foreground:        oklch(0.13 0 0);
+  --color-foreground-muted:  oklch(0.38 0 0);
+  --color-foreground-subtle: oklch(0.57 0 0);
+
+  /* Border */
+  --color-border:       oklch(0.83 0.004 85);
+  --color-border-strong:oklch(0.70 0.006 85);
+  --color-input:        oklch(0.83 0.004 85);
+
+  /* Card */
+  --color-card:            oklch(0.93 0.005 85);
+  --color-card-foreground: oklch(0.13 0 0);
+
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
 /* ─── Custom Utilities ────────────────────────────────────────── */
 @layer utilities {
   .container-page {
@@ -151,7 +258,7 @@
       linear-gradient(
           135deg,
           var(--color-primary),
-          oklch(0.716 0.143 202.8)
+          oklch(0.82 0 0)
         )
         border-box;
   }

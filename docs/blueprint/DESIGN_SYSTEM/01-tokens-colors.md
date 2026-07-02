@@ -43,10 +43,12 @@ Token source: [src/app/globals.css](../../../src/app/globals.css) `@theme {}` bl
 
 | Utility class | CSS variable | oklch value | Elevation |
 |---|---|---|---|
-| `bg-background` | `--color-background` | `oklch(0.073 0.018 264)` | Page background (lowest) |
-| `bg-surface` | `--color-surface` | `oklch(0.1 0.018 264)` | Cards, inputs |
-| `bg-surface-raised` | `--color-surface-raised` | `oklch(0.13 0.016 264)` | Dropdowns, tooltips |
-| `bg-surface-overlay` | `--color-surface-overlay` | `oklch(0.17 0.014 264)` | Modals, sheets (highest) |
+| `bg-background` | `--color-background` | `oklch(0.073 0 0)` | Page background (lowest) |
+| `bg-surface` | `--color-surface` | `oklch(0.1 0 0)` | Cards, inputs |
+| `bg-surface-raised` | `--color-surface-raised` | `oklch(0.13 0 0)` | Dropdowns, tooltips |
+| `bg-surface-overlay` | `--color-surface-overlay` | `oklch(0.17 0 0)` | Modals, sheets (highest) |
+
+All surfaces are pure neutral — zero chroma, zero hue. No blue tint.
 
 Elevation rule: `background < surface < surface-raised < surface-overlay`
 
@@ -54,35 +56,37 @@ Elevation rule: `background < surface < surface-raised < surface-overlay`
 
 ## Text Tokens
 
-| Utility class | CSS variable | Use |
-|---|---|---|
-| `text-foreground` | `--color-foreground` | Primary text |
-| `text-foreground-muted` | `--color-foreground-muted` | Secondary, descriptions |
-| `text-foreground-subtle` | `--color-foreground-subtle` | Placeholder, disabled labels |
+| Utility class | CSS variable | oklch | Use |
+|---|---|---|---|
+| `text-foreground` | `--color-foreground` | `oklch(0.82 0 0)` | Primary text — silver tone |
+| `text-foreground-muted` | `--color-foreground-muted` | `oklch(0.52 0 0)` | Secondary, descriptions |
+| `text-foreground-subtle` | `--color-foreground-subtle` | `oklch(0.35 0 0)` | Placeholder, disabled labels |
 
 ---
 
 ## Border Tokens
 
-| Utility class | CSS variable | Use |
-|---|---|---|
-| `border-border` | `--color-border` | Default borders (auto-applied globally) |
-| `border-border-strong` | `--color-border-strong` | Hover/focus border state |
-| `border-input` | `--color-input` | Form field borders |
+| Utility class | CSS variable | oklch | Use |
+|---|---|---|---|
+| `border-border` | `--color-border` | `oklch(0.2 0 0)` | Default borders (auto-applied globally) |
+| `border-border-strong` | `--color-border-strong` | `oklch(0.28 0 0)` | Hover/focus border state |
+| `border-input` | `--color-input` | `oklch(0.2 0 0)` | Form field borders |
 
 ---
 
-## Primary Color Tokens (Electric Blue)
+## Primary Color Tokens (Gold)
+
+`#D4AF37` — used exclusively for CTAs, key accents, and the focus ring. Use sparingly.
 
 | Utility class | CSS variable | Use |
 |---|---|---|
 | `bg-primary` | `--color-primary` | Primary actions |
 | `bg-primary-hover` | `--color-primary-hover` | Hover state |
 | `bg-primary-active` | `--color-primary-active` | Active/pressed state |
-| `text-primary-foreground` | `--color-primary-foreground` | Text on primary bg |
+| `text-primary-foreground` | `--color-primary-foreground` | Text on primary bg (near-black) |
 | `bg-primary-subtle` | `--color-primary-subtle` | 12% opacity tint |
 | `shadow-primary-glow` | `--color-primary-glow` | Glow effect (35% opacity) |
-| `ring-ring` | `--color-ring` | Focus ring (= primary) |
+| `ring-ring` | `--color-ring` | Focus ring (= primary gold) |
 
 ---
 

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "Yevo Cosuren",
+    "role": "CEO",
+    "photo": "/images/team/yevo-cosuren.png",
+    "bio": "",
+    "social": {
+      "instagram": "https://www.instagram.com/yevo_cl/#"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Alexander Fernaldi Kusumo",
+    "role": "Project Manager",
+    "photo": "/images/team/alexander-fernaldi-kusumo.png",
+    "bio": "",
+    "social": {
+      "instagram": "https://www.instagram.com/sinyoalex.24/#"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Heaven David William",
+    "role": "Graphic Designer",
+    "photo": "/images/team/heaven-david-william.png",
+    "bio": "",
+    "social": {
+      "instagram": "https://www.instagram.com/h.david.w/#"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Maxwell Arlyn Delen Salim",
+    "role": "Production House",
+    "photo": "/images/team/maxwell-arlyn-delen-salim.png",
+    "bio": "",
+    "social": {
+      "instagram": "https://www.instagram.com/maxwell_ads12/#"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Pieter Setyawan",
+    "role": "Videographer",
+    "photo": "/images/team/pieter-setyawan.png",
+    "bio": "",
+    "social": {
+      "instagram": "https://www.instagram.com/ordinary_pietro/#"
+    }
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Portfolio",
+    "description": "Lihat portofolio Forsure Digitalindo — website, creative content, dan photoshoot profesional yang mengangkat brand klien kami."
+  },
+  "hero": {
+    "eyebrow": "Karya Kami",
+    "headline": "Proyek yang\nKami Banggakan",
+    "subheadline": "Setiap proyek adalah sebuah cerita — berikut beberapa karya terbaik kami."
+  },
+  "filter": {
+    "all": "Semua",
+    "website": "Website",
+    "creative": "Creative Content",
+    "photoshoot": "Photoshoot"
+  },
+  "card": {
+    "viewProject": "Lihat Proyek",
+    "client": "Klien"
+  },
+  "empty": "Belum ada proyek di kategori ini. Pantau terus!",
+  "cta": {
+    "heading": "Suka dengan Karya Kami?",
+    "subheading": "Yuk buat sesuatu yang luar biasa untuk brand Anda.",
+    "button": "Mulai Proyek"
+  }
+}

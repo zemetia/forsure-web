@@ -1,8 +1,9 @@
 {
   "home": "Beranda",
-  "about": "Tentang",
-  "signIn": "Masuk",
-  "getStarted": "Mulai",
+  "services": "Layanan",
+  "portfolio": "Portfolio",
+  "about": "Tentang Kami",
+  "contact": "Hubungi Kami",
   "openMenu": "Buka menu",
   "closeMenu": "Tutup menu"
 }

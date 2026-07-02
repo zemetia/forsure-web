@@ -53,3 +53,4 @@
 <!-- Format: `[YYYY-MM-DD] insight` -->
 
 - [2026-06-06] Developer explicitly designed a two-tier learning system: THIS.md for general knowledge, LEARN.md for corrections — treat both as first-class project docs
+- [2026-06-27] Brand direction: "Luxury Noir agency" — premium agency, not ornate luxury brand. Black surfaces (pure neutral, zero chroma), silver `oklch(0.82 0 0)` as primary text, gold `oklch(0.768 0.131 83.5)` as the sole CTA/accent (use sparingly). Typography: Cormorant Garamond (`font-display`) for hero/display text only — Outfit (`font-sans`) for all UI/body. Icons intentionally minimized — only where functionally essential, never decorative filler.

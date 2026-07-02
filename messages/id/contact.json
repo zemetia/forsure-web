@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "title": "Hubungi Kami",
+    "description": "Hubungi Forsure Digitalindo. Konsultasi gratis, tanpa komitmen. WhatsApp, email, atau Instagram."
+  },
+  "hero": {
+    "eyebrow": "Hubungi Kami",
+    "headline": "Yuk Ngobrol\nSoal Brand Anda",
+    "subheadline": "Konsultasi gratis, tanpa komitmen. Ceritakan kebutuhan brand Anda dan kami siap membantu."
+  },
+  "channels": {
+    "heading": "Temukan Kami Di",
+    "whatsapp": "Chat via WhatsApp",
+    "whatsappSub": "Respons paling cepat — biasanya dalam 1 jam",
+    "email": "Kirim Email",
+    "emailSub": "Respons dalam 1 hari kerja",
+    "instagram": "Follow di Instagram",
+    "instagramSub": "Lihat karya & cerita terbaru kami"
+  },
+  "hours": {
+    "heading": "Jam Operasional"
+  },
+  "faq": {
+    "heading": "Pertanyaan yang Sering Ditanyakan"
+  },
+  "cta": {
+    "heading": "Siap Mulai?",
+    "subheading": "Satu pesan sudah cukup. Kami yang akan urus sisanya.",
+    "button": "WhatsApp Sekarang"
+  }
+}
