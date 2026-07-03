@@ -157,6 +157,30 @@ export function serviceListSchema(services: ServiceListItem[]): WithContext<unkn
   };
 }
 
+export interface CollectionPageSchemaOptions {
+  name: string;
+  description: string;
+  url: string;
+}
+
+/** CollectionPage schema — use on portfolio/gallery pages so AI overviews can cite the body of work. */
+export function collectionPageSchema(opts: CollectionPageSchemaOptions): WithContext<unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: opts.name,
+    description: opts.description,
+    url: opts.url,
+    inLanguage: 'id',
+    isPartOf: { '@type': 'WebSite', url: siteConfig.url, name: siteConfig.name },
+    provider: {
+      '@type': 'Organization',
+      name: siteConfig.company.legalName,
+      url: siteConfig.url,
+    },
+  };
+}
+
 export interface WebPageSchemaOptions {
   name: string;
   description: string;

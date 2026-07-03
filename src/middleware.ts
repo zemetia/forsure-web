@@ -13,8 +13,11 @@ export async function middleware(request: NextRequest) {
   const rateLimited = await applyRateLimit(request);
   if (rateLimited) return rateLimited;
 
-  // API routes — skip intl routing, only security headers
-  if (request.nextUrl.pathname.startsWith('/api')) {
+  // Non-page routes — skip intl routing, only security headers
+  if (
+    request.nextUrl.pathname.startsWith('/api') ||
+    request.nextUrl.pathname === '/og'
+  ) {
     return applySecurityHeaders(NextResponse.next());
   }
 

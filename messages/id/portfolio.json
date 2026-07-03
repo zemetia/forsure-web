@@ -11,8 +11,8 @@
   "filter": {
     "all": "Semua",
     "website": "Website",
-    "creative": "Creative Content",
-    "photoshoot": "Photoshoot"
+    "creative": "Konten Kreatif",
+    "photoshoot": "Foto & Video"
   },
   "card": {
     "viewProject": "Lihat Proyek",

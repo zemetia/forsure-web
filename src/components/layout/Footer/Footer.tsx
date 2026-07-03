@@ -104,10 +104,10 @@ export function Footer({ className }: FooterProps) {
       <div className="border-t border-border bg-surface">
         <div className="container-page flex flex-col items-center justify-between gap-2 py-5 sm:flex-row">
           <p className="text-xs text-foreground-subtle">
-            © {year} {name}. All rights reserved.
+            © {year} {name}. Hak cipta dilindungi.
           </p>
           <p className="text-xs text-foreground-subtle">
-            Your Brand Deserves to Be Seen.
+            {tagline}
           </p>
         </div>
       </div>

@@ -87,9 +87,9 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   // ─── Core Identity ───────────────────────────────────────────────────────────
   name: 'Forsure Digitalindo',
-  tagline: 'Your Brand Deserves to Be Seen',
+  tagline: 'Brand Anda Layak untuk Dilihat',
   description:
-    'Forsure Digitalindo adalah agency digital premium di Surabaya (Jl. Ir. Soekarno / MERR) yang menghadirkan website profesional, creative content, dan photoshoot berkualitas tinggi untuk mengangkat brand Anda.',
+    'Forsure Digitalindo adalah agency digital premium di Surabaya (Jl. Ir. Soekarno No.15) yang menghadirkan website profesional, creative content, dan photoshoot berkualitas tinggi untuk mengangkat brand Anda.',
   url: process.env['NEXT_PUBLIC_APP_URL'] ?? 'https://forsure.id',
 
   // ─── Brand Assets ────────────────────────────────────────────────────────────
@@ -97,7 +97,7 @@ export const siteConfig: SiteConfig = {
 
   // ─── Contact ─────────────────────────────────────────────────────────────────
   contact: {
-    phone: '+62 897-0297-969',
+    phone: '+62 853-8555-9774',
     email: 'forsure.digitalindo@gmail.com',
     instagram: 'https://instagram.com/forsure.ids',
     instagramHandle: '@forsure.ids',
@@ -133,7 +133,7 @@ export const siteConfig: SiteConfig = {
 
     // ─── Location ───────────────────────────────────────────────────────────────
     location: {
-      streetAddress: 'Jl. Ir. Soekarno (MERR)',
+      streetAddress: 'Jl. Ir. Soekarno No.15',
       city: 'Surabaya',
       region: 'Jawa Timur',
       country: 'ID',
@@ -152,8 +152,8 @@ export const siteConfig: SiteConfig = {
       'agency kreatif Surabaya',
       'Forsure Digitalindo',
       'Yevo Cosuren',
-      'digital agency MERR Surabaya',
-      'agency Jl Ir Soekarno Surabaya',
+      'digital agency Jl Ir Soekarno Surabaya',
+      'agency Jl Ir Soekarno No 15 Surabaya',
       'jasa creative content Surabaya',
       'jasa photoshoot Surabaya',
     ],
@@ -169,15 +169,15 @@ export const siteConfig: SiteConfig = {
   // ─── Footer Links ─────────────────────────────────────────────────────────────
   footerLinks: {
     pages: [
-      { label: 'Home', href: '/' },
-      { label: 'Services', href: '/services' },
+      { label: 'Beranda', href: '/' },
+      { label: 'Layanan', href: '/services' },
       { label: 'Portfolio', href: '/portfolio' },
-      { label: 'About Us', href: '/about' },
+      { label: 'Tentang Kami', href: '/about' },
     ],
     services: [
-      { label: 'Website Solutions', href: '/services#website' },
-      { label: 'Creative Content', href: '/services#creative' },
-      { label: 'Photoshoot', href: '/services#photoshoot' },
+      { label: 'Solusi Website', href: '/services#website' },
+      { label: 'Konten Kreatif', href: '/services#creative' },
+      { label: 'Foto & Video', href: '/services#photoshoot' },
     ],
   },
 
@@ -187,7 +187,7 @@ export const siteConfig: SiteConfig = {
       path: '/',
       title: 'Forsure Digitalindo — Agency Digital Surabaya',
       description:
-        'Forsure Digitalindo — agency digital premium di Surabaya (MERR, Jl. Ir. Soekarno). Jasa website profesional, creative content, dan photoshoot berkualitas tinggi. Didirikan oleh Yevo Cosuren. Konsultasi gratis.',
+        'Forsure Digitalindo — agency digital premium di Surabaya (Jl. Ir. Soekarno No.15). Jasa website profesional, creative content, dan photoshoot berkualitas tinggi. Didirikan oleh Yevo Cosuren. Konsultasi gratis.',
       changeFreq: 'weekly',
       priority: 1.0,
     },
@@ -195,7 +195,7 @@ export const siteConfig: SiteConfig = {
       path: '/services',
       title: 'Layanan Agency Digital Surabaya',
       description:
-        'Layanan Forsure Digitalindo Surabaya: pembuatan website profesional, creative content, dan photoshoot. Agency digital di kawasan MERR (Jl. Ir. Soekarno) Surabaya.',
+        'Layanan Forsure Digitalindo Surabaya: pembuatan website profesional, creative content, dan photoshoot. Agency digital di Jl. Ir. Soekarno No.15, Surabaya.',
       changeFreq: 'monthly',
       priority: 0.9,
     },
@@ -219,7 +219,7 @@ export const siteConfig: SiteConfig = {
       path: '/contact',
       title: 'Hubungi Forsure Digitalindo Surabaya',
       description:
-        'Konsultasi gratis dengan Forsure Digitalindo. Kantor di Jl. Ir. Soekarno (MERR), Surabaya. Hubungi via WhatsApp, email, atau Instagram — kami siap membantu brand Anda.',
+        'Konsultasi gratis dengan Forsure Digitalindo. Kantor di Jl. Ir. Soekarno No.15, Surabaya. Hubungi via WhatsApp, email, atau Instagram — kami siap membantu brand Anda.',
       changeFreq: 'monthly',
       priority: 0.8,
     },

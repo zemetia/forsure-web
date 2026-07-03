@@ -1,20 +1,25 @@
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
 import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 export async function GET() {
+  const logoPath = path.join(process.cwd(), 'public', 'logo.png');
+  const logoData = await readFile(logoPath);
+  const logoSrc = `data:image/png;base64,${logoData.toString('base64')}`;
+
   return new ImageResponse(
     (
       <div
         style={{
           width: '1200px',
           height: '630px',
-          background: '#111',
+          background: '#0a0a0a',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          fontFamily: 'Georgia, serif',
           position: 'relative',
           overflow: 'hidden',
         }}
@@ -24,82 +29,55 @@ export async function GET() {
           style={{
             position: 'absolute',
             top: '50%',
-            left: '30%',
+            left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: '600px',
+            width: '700px',
             height: '400px',
-            background: 'radial-gradient(ellipse, rgba(202,164,82,0.15) 0%, transparent 70%)',
+            background:
+              'radial-gradient(ellipse, rgba(202,164,82,0.12) 0%, transparent 70%)',
           }}
         />
 
-        {/* Gold dot */}
-        <div
-          style={{
-            width: '8px',
-            height: '8px',
-            borderRadius: '50%',
-            background: '#C9A852',
-            marginBottom: '24px',
-          }}
+        {/* Logo */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={logoSrc}
+          alt="Forsure Digitalindo"
+          width={180}
+          height={180}
+          style={{ objectFit: 'contain', marginBottom: '32px' }}
         />
+
+        {/* Brand name */}
+        <p
+          style={{
+            fontSize: '36px',
+            color: '#d4d4d4',
+            fontFamily: 'system-ui',
+            fontWeight: 300,
+            letterSpacing: '0.08em',
+            margin: '0 0 12px',
+          }}
+        >
+          Forsure Digitalindo
+        </p>
 
         {/* Tagline */}
         <p
           style={{
             fontSize: '16px',
             color: '#C9A852',
-            letterSpacing: '0.15em',
+            letterSpacing: '0.18em',
             textTransform: 'uppercase',
-            marginBottom: '24px',
             fontFamily: 'system-ui',
-            fontWeight: 600,
+            fontWeight: 500,
+            margin: 0,
           }}
         >
           Agency Digital Premium · Indonesia
         </p>
 
-        {/* Main headline */}
-        <h1
-          style={{
-            fontSize: '72px',
-            color: '#d4d4d4',
-            fontWeight: 300,
-            lineHeight: 1.1,
-            textAlign: 'center',
-            margin: '0 0 12px',
-            fontStyle: 'italic',
-          }}
-        >
-          Your Brand
-        </h1>
-        <h1
-          style={{
-            fontSize: '72px',
-            color: '#C9A852',
-            fontWeight: 300,
-            lineHeight: 1.1,
-            textAlign: 'center',
-            margin: '0 0 12px',
-            fontStyle: 'italic',
-          }}
-        >
-          Deserves to Be Seen.
-        </h1>
-
-        {/* Brand name */}
-        <p
-          style={{
-            marginTop: '32px',
-            fontSize: '18px',
-            color: '#555',
-            fontFamily: 'system-ui',
-            letterSpacing: '0.05em',
-          }}
-        >
-          Forsure Digitalindo
-        </p>
-
-        {/* Bottom border line */}
+        {/* Bottom accent line */}
         <div
           style={{
             position: 'absolute',

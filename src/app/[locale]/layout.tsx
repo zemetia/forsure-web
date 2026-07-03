@@ -7,6 +7,8 @@ import { getMessages } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import type { Locale } from '@/i18n/routing';
 import { buildMetadata } from '@/lib/seo';
+import { serializeSchema } from '@/lib/structured-data';
+import { siteConfig } from '@/config/site';
 import { Toaster } from '@/components/ui/Sonner';
 import { PostHogProvider } from '@/providers';
 import { FloatingWhatsApp } from '@/components/ui/FloatingWhatsApp';
@@ -65,6 +67,29 @@ export default async function LocaleLayout({ children, params }: Props) {
       suppressHydrationWarning
     >
       <body>
+        <script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: serializeSchema({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: siteConfig.name,
+              alternateName: 'Forsure',
+              url: siteConfig.url,
+              description: siteConfig.description,
+              inLanguage: 'id',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: `${siteConfig.url}/portfolio?q={search_term_string}`,
+                },
+                'query-input': 'required name=search_term_string',
+              },
+            }),
+          }}
+        />
         <NextIntlClientProvider messages={messages}>
           <PostHogProvider>
             {children}

@@ -9,17 +9,17 @@
     "cta": "Jelajahi Semua Layanan"
   },
   "filter": {
-    "website": "Website Solutions",
-    "creative": "Creative Content",
-    "photoshoot": "Photoshoot"
+    "website": "Solusi Website",
+    "creative": "Konten Kreatif",
+    "photoshoot": "Foto & Video"
   },
   "sections": {
     "website": {
-      "title": "Website Solutions",
+      "title": "Solusi Website",
       "subtitle": "Website profesional yang dibangun untuk mengkonversi pengunjung menjadi klien."
     },
     "creative": {
-      "title": "Creative Content Services",
+      "title": "Layanan Konten Kreatif",
       "subtitle": "Konten kreatif yang dirancang untuk suara brand Anda."
     },
     "photoshoot": {

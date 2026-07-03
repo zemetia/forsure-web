@@ -40,9 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-export default async function HomePage({ params }: Props) {
-  const { locale } = await params;
-
+export default function HomePage() {
   return (
     <>
       <Navbar />
@@ -85,7 +83,7 @@ export default async function HomePage({ params }: Props) {
             webPageSchema({
               name: siteConfig.pages['home']?.title ?? siteConfig.name,
               description: siteConfig.pages['home']?.description ?? siteConfig.description,
-              url: `${siteConfig.url}/${locale}`,
+              url: siteConfig.url,
             }),
           ),
         }}
@@ -109,7 +107,7 @@ export default async function HomePage({ params }: Props) {
               {
                 question: 'Berapa biaya jasa pembuatan website di Forsure Digitalindo?',
                 answer:
-                  'Harga bervariasi sesuai kebutuhan. Konsultasi awal gratis — hubungi kami via WhatsApp di +62 897-0297-969 untuk mendapatkan estimasi harga yang sesuai dengan brand Anda.',
+                  'Harga bervariasi sesuai kebutuhan. Konsultasi awal gratis — hubungi kami via WhatsApp di +62 853-8555-9774 untuk mendapatkan estimasi harga yang sesuai dengan brand Anda.',
               },
               {
                 question: 'Apakah Forsure Digitalindo melayani klien dari luar Surabaya?',

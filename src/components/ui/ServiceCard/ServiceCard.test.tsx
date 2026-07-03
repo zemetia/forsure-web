@@ -27,9 +27,9 @@ describe('ServiceCard', () => {
   });
 
   it('renders CTA link with correct href', () => {
-    render(<ServiceCard {...defaultProps} ctaHref="https://wa.me/628970297969" />);
+    render(<ServiceCard {...defaultProps} ctaHref="https://wa.me/6285385559774" />);
     const link = screen.getByRole('link', { name: 'Inquire' });
-    expect(link).toHaveAttribute('href', 'https://wa.me/628970297969');
+    expect(link).toHaveAttribute('href', 'https://wa.me/6285385559774');
   });
 
   it('shows Popular badge on featured variant', () => {

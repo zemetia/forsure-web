@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { Mail, Clock, MessageCircle } from 'lucide-react';
 
+import { Link } from '@/i18n/navigation';
+
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Reveal } from '@/components/ui/Reveal';
@@ -85,7 +87,7 @@ export default async function ContactPage({ params }: Props) {
             webPageSchema({
               name: siteConfig.pages['contact']?.title ?? 'Hubungi Kami',
               description: siteConfig.pages['contact']?.description ?? '',
-              url: `${siteConfig.url}/${locale}/contact`,
+              url: `${siteConfig.url}/contact`,
             }),
           ),
         }}
@@ -229,6 +231,17 @@ export default async function ContactPage({ params }: Props) {
                 <MessageCircle className="h-4 w-4" />
                 {t('cta.button')}
               </a>
+              <div className="mt-8 flex items-center justify-center gap-8">
+                <Link href="/services" className="text-sm text-foreground-muted transition-colors hover:text-foreground">
+                  Lihat Layanan →
+                </Link>
+                <Link href="/portfolio" className="text-sm text-foreground-muted transition-colors hover:text-foreground">
+                  Lihat Portfolio →
+                </Link>
+                <Link href="/about" className="text-sm text-foreground-muted transition-colors hover:text-foreground">
+                  Tentang Kami →
+                </Link>
+              </div>
             </Reveal>
           </div>
         </section>

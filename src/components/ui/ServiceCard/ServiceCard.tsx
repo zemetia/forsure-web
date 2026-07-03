@@ -44,7 +44,7 @@ export function ServiceCard({
   subtitle,
   features,
   variant,
-  ctaLabel = 'Inquire',
+  ctaLabel = 'Tanya Harga',
   ctaHref = '#',
   className,
 }: ServiceCardProps) {
@@ -54,7 +54,7 @@ export function ServiceCard({
     <article className={cn(cardVariants({ variant }), className)}>
       {variant === 'featured' && (
         <span className="absolute right-4 top-4 rounded-full border border-primary bg-primary-subtle px-2 py-0.5 text-[10px] font-medium uppercase tracking-widest text-primary">
-          Popular
+          Populer
         </span>
       )}
 

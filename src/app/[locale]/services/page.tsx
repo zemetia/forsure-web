@@ -60,7 +60,7 @@ export default async function ServicesPage({ params }: Props) {
     { id: 'photoshoot', label: t('filter.photoshoot'), anchor: 'photoshoot' },
   ];
 
-  const pageUrl = `${siteConfig.url}/${locale}/services`;
+  const pageUrl = `${siteConfig.url}/services`;
 
   return (
     <>

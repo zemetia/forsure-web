@@ -1,7 +1,4 @@
-/**
- * Single source of truth untuk semua konten halaman Contact.
- * Edit file ini untuk memperbarui info kontak, jam operasional, dan FAQ.
- */
+import { siteConfig } from '@/config/site';
 
 export interface OfficeHours {
   days: string;
@@ -18,15 +15,15 @@ export interface ContactFAQ {
 export const contactConfig = {
   // ─── Primary Channels ─────────────────────────────────────────────────────
   whatsapp: {
-    /** Nomor tanpa spasi/simbol, diawali kode negara */
-    number: '6289702979969',
-    display: '+62 897-0297-969',
+    /** Nomor tanpa spasi/simbol, diawali kode negara — derived dari siteConfig */
+    number: siteConfig.contact.phone.replace(/[^0-9]/g, ''),
+    display: siteConfig.contact.phone,
     defaultMessage: 'Halo Forsure, saya ingin konsultasi mengenai layanan Anda.',
   },
-  email: 'forsure.digitalindo@gmail.com',
+  email: siteConfig.contact.email,
   instagram: {
-    url: 'https://instagram.com/forsure.ids',
-    handle: '@forsure.ids',
+    url: siteConfig.contact.instagram,
+    handle: siteConfig.contact.instagramHandle,
   },
 
   // ─── Office Hours ──────────────────────────────────────────────────────────

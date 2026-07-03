@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { buildMetadata } from '@/lib/seo';
-import { serializeSchema, webPageSchema, breadcrumbSchema, organizationSchema, personSchema } from '@/lib/structured-data';
+import { serializeSchema, webPageSchema, breadcrumbSchema, organizationSchema, personSchema, localBusinessSchema, faqSchema } from '@/lib/structured-data';
 import { siteConfig } from '@/config/site';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -61,13 +61,48 @@ export default function AboutPage() {
         }}
       />
       <script
+        id="local-business-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeSchema(localBusinessSchema()) }}
+      />
+      <script
         id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: serializeSchema(
             breadcrumbSchema([
-              { name: 'Home', url: siteConfig.url },
-              { name: 'About Us', url: `${siteConfig.url}/about` },
+              { name: 'Beranda', url: siteConfig.url },
+              { name: 'Tentang Kami', url: `${siteConfig.url}/about` },
+            ]),
+          ),
+        }}
+      />
+      <script
+        id="about-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: serializeSchema(
+            faqSchema([
+              {
+                question: 'Kapan Forsure Digitalindo didirikan?',
+                answer: 'Forsure Digitalindo didirikan pada tahun 2024 oleh Yevo Cosuren di Surabaya, Indonesia.',
+              },
+              {
+                question: 'Siapa pendiri Forsure Digitalindo?',
+                answer: 'Forsure Digitalindo didirikan oleh Yevo Cosuren yang menjabat sebagai CEO & Founder. Yevo membangun agency ini dengan visi menjadi mitra digital terpercaya untuk bisnis dan brand di Indonesia.',
+              },
+              {
+                question: 'Di mana kantor Forsure Digitalindo?',
+                answer: 'Kantor Forsure Digitalindo berlokasi di Jl. Ir. Soekarno No.15, Surabaya, Jawa Timur, Indonesia. Kami juga melayani klien dari seluruh Indonesia secara remote.',
+              },
+              {
+                question: 'Apa visi Forsure Digitalindo?',
+                answer: 'Visi Forsure Digitalindo adalah menjadi agency digital premium yang mengangkat brand klien melalui solusi website profesional, creative content yang berdampak, dan fotografi berkualitas tinggi.',
+              },
+              {
+                question: 'Apa saja layanan utama Forsure Digitalindo?',
+                answer: 'Forsure Digitalindo menyediakan tiga layanan utama: (1) Website Solutions — pembuatan website company profile, landing page, dan e-commerce; (2) Creative Content — desain konten media sosial dan branding; (3) Photoshoot — fotografi produk, portrait, dan pre-wedding profesional.',
+              },
             ]),
           ),
         }}
