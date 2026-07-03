@@ -27,7 +27,7 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // All routes except static assets — /api is included so rate limiting applies
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)).*)',
+    // Exclude static assets and well-known root files that must never be locale-prefixed
+    '/((?!_next/static|_next/image|favicon.ico|sitemap\\.xml|robots\\.txt|llms\\.txt|llms-full\\.txt|manifest\\.json|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)).*)',
   ],
 };
