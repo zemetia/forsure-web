@@ -18,7 +18,7 @@ export function LocationMap() {
           <div className="overflow-hidden rounded-2xl border border-border">
             <iframe
               title={`Lokasi ${siteConfig.name}`}
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8!2d112.78075064175268!3d-7.290470966303712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zLTcuMjkwNDcxLDExMi43ODA3NTA!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8!2d112.7807757!3d-7.2904735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb000b16a81f%3A0x1326fd598b2194f1!2sHelden%20Coffee!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
               width="100%"
               height="420"
               style={{ border: 0, display: 'block', filter: 'invert(90%) hue-rotate(180deg)' }}

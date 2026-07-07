@@ -8,7 +8,6 @@ import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/cn';
 import { NavLink } from './NavLink';
 import { MobileMenu } from './MobileMenu';
-import { LocaleSwitcher } from './LocaleSwitcher';
 
 export interface NavbarProps {
   className?: string;
@@ -71,7 +70,6 @@ export function Navbar({ className }: NavbarProps) {
 
         {/* CTA + Locale + Mobile toggle */}
         <div className="flex items-center gap-3">
-          <LocaleSwitcher />
           <Link
             href="/contact"
             className="hidden h-8 items-center justify-center rounded-md border border-border-strong px-3 text-sm font-medium text-foreground transition-colors duration-150 hover:border-primary hover:bg-primary-subtle md:inline-flex"
