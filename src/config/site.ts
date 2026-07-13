@@ -162,7 +162,7 @@ export const siteConfig: SiteConfig = {
   // ─── SEO Settings ────────────────────────────────────────────────────────────
   seo: {
     titleTemplate: '%s | Forsure Digitalindo',
-    defaultTitle: 'Forsure Digitalindo — Agency Digital Surabaya',
+    defaultTitle: 'Forsure Digitalindo | Agency Digital Surabaya',
     locale: 'id_ID',
   },
 
@@ -185,7 +185,7 @@ export const siteConfig: SiteConfig = {
   pages: {
     home: {
       path: '/',
-      title: 'Forsure Digitalindo — Agency Digital Surabaya',
+      title: 'Forsure Digitalindo | Agency Digital Surabaya',
       description:
         'Forsure Digitalindo — agency digital premium di Surabaya (Jl. Ir. Soekarno No.15). Jasa website profesional, creative content, dan photoshoot berkualitas tinggi. Didirikan oleh Yevo Cosuren. Konsultasi gratis.',
       changeFreq: 'weekly',
@@ -201,7 +201,7 @@ export const siteConfig: SiteConfig = {
     },
     portfolio: {
       path: '/portfolio',
-      title: 'Portfolio — Forsure Digitalindo Surabaya',
+      title: 'Portfolio | Forsure Digitalindo Surabaya',
       description:
         'Hasil karya Forsure Digitalindo — koleksi proyek website, konten kreatif, dan fotografi profesional yang telah kami kerjakan untuk klien dari Surabaya dan seluruh Indonesia.',
       changeFreq: 'weekly',

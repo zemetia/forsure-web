@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [],
+    // Serve images from their original path (no /_next/image proxy) so
+    // Google can crawl thumbnails/OG images directly.
+    unoptimized: true,
   },
 };
 
