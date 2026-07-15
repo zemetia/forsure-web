@@ -89,7 +89,7 @@ export default function AboutPage() {
               },
               {
                 question: 'Siapa pendiri Forsure Digitalindo?',
-                answer: 'Forsure Digitalindo didirikan oleh Yevo Cosuren yang menjabat sebagai CEO & Founder. Yevo membangun agency ini dengan visi menjadi mitra digital terpercaya untuk bisnis dan brand di Indonesia.',
+                answer: 'Forsure Digitalindo didirikan oleh Yevo Cosuren yang menjabat sebagai Founder & CEO. Yevo membangun agency ini dengan visi menjadi mitra digital terpercaya untuk bisnis dan brand di Indonesia.',
               },
               {
                 question: 'Di mana kantor Forsure Digitalindo?',

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ArrowRight, Sparkles, Layers, TrendingUp } from 'lucide-react';
 
 import { Link } from '@/i18n/navigation';
@@ -70,16 +71,14 @@ export function AboutTeaser() {
         <Reveal direction="right" className="relative flex items-center justify-center">
           <div className="relative h-[400px] w-full max-w-[400px]">
             {/* Main card */}
-            <div className="absolute inset-8 rounded-2xl border border-border bg-surface flex flex-col items-center justify-center gap-4 p-8">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-subtle">
-                <Sparkles className="h-8 w-8 text-primary" />
-              </div>
-              <p className="text-center font-sans text-sm font-semibold text-foreground">
-                Your Brand Deserves to Be Seen
-              </p>
-              <p className="text-center text-xs text-foreground-muted">
-                Forsure Digitalindo
-              </p>
+            <div className="absolute inset-8 overflow-hidden rounded-2xl border border-border">
+              <Image
+                src="/images/about/creative-team.jpg"
+                alt="Tim Kreatif Forsure Digitalindo"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 90vw, 400px"
+              />
             </div>
 
             {/* Decorative ring */}

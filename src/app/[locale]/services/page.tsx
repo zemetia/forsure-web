@@ -9,6 +9,7 @@ import { ServiceSection } from '@/components/sections/services/ServiceSection';
 import { ServiceCTA } from '@/components/sections/services/ServiceCTA';
 import { ServiceCard } from '@/components/ui/ServiceCard';
 import { PricingTierGroup } from '@/components/ui/PricingTier';
+import { ClientMarquee } from '@/components/sections/landing/ClientMarquee';
 import { SERVICES, PREWED_TIERS } from '@/data/services';
 import { buildMetadata } from '@/lib/seo';
 import { siteConfig } from '@/config/site';
@@ -245,6 +246,8 @@ export default async function ServicesPage({ params }: Props) {
             />
           ))}
         </ServiceSection>
+
+        <ClientMarquee />
 
         <ServiceCTA
           heading={t('cta.heading')}

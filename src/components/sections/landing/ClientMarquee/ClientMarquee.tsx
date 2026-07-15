@@ -34,7 +34,7 @@ function Track({ reverse = false }: { reverse?: boolean }) {
 
 export function ClientMarquee() {
   return (
-    <section className="border-y border-border bg-surface py-16 overflow-hidden">
+    <section className="section-light border-y border-border bg-surface py-16 overflow-hidden">
       <Reveal>
         <p className="mb-10 text-center font-sans text-xs font-semibold tracking-widest text-foreground-subtle uppercase">
           Dipercaya Oleh

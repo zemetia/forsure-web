@@ -1,4 +1,5 @@
-import { Monitor, Camera, Palette, TrendingUp } from 'lucide-react';
+import Image from 'next/image';
+import { Camera, TrendingUp } from 'lucide-react';
 
 export function HeroVisual() {
   return (
@@ -13,55 +14,16 @@ export function HeroVisual() {
         }}
       />
 
-      {/* Main browser mockup */}
-      <div className="relative z-10 w-full max-w-[400px] rounded-2xl border border-border bg-surface shadow-2xl">
-        {/* Browser chrome */}
-        <div className="flex items-center gap-2 rounded-t-2xl border-b border-border bg-surface-raised px-4 py-3">
-          <span className="h-2.5 w-2.5 rounded-full bg-destructive-subtle" />
-          <span className="h-2.5 w-2.5 rounded-full bg-warning-subtle" />
-          <span className="h-2.5 w-2.5 rounded-full bg-success-subtle" />
-          <div className="ml-2 flex-1 rounded-full border border-border bg-surface px-3 py-1 text-xs text-foreground-subtle">
-            forsure.id
-          </div>
-        </div>
-
-        {/* Website content mockup */}
-        <div className="p-5 space-y-4">
-          {/* Navbar line */}
-          <div className="flex items-center justify-between">
-            <div className="h-3 w-16 rounded-full bg-foreground-subtle" />
-            <div className="flex gap-2">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="h-2 w-10 rounded-full bg-surface-raised" />
-              ))}
-            </div>
-          </div>
-
-          {/* Hero content */}
-          <div className="rounded-xl border border-border bg-surface-raised p-4 space-y-2">
-            <div className="h-5 w-3/4 rounded-full bg-foreground-subtle" />
-            <div className="h-3 w-full rounded-full bg-border" />
-            <div className="h-3 w-4/5 rounded-full bg-border" />
-            <div className="mt-3 flex gap-2">
-              <div className="h-7 w-24 rounded-md bg-primary" />
-              <div className="h-7 w-20 rounded-md border border-border" />
-            </div>
-          </div>
-
-          {/* Cards row */}
-          <div className="grid grid-cols-3 gap-2">
-            {[Monitor, Camera, Palette].map((Icon, i) => (
-              <div
-                key={i}
-                className="rounded-lg border border-border bg-surface-raised p-3 flex flex-col items-center gap-1.5"
-              >
-                <Icon className="h-4 w-4 text-primary" />
-                <div className="h-1.5 w-full rounded-full bg-border" />
-                <div className="h-1.5 w-3/4 rounded-full bg-surface-overlay" />
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Main photo frame */}
+      <div className="relative z-10 aspect-[3/2] w-full max-w-[460px] overflow-hidden rounded-2xl border border-border shadow-2xl">
+        <Image
+          src="/images/hero/si-hero.jpg"
+          alt="Tim Forsure Digitalindo bekerja di lapangan"
+          fill
+          priority
+          className="object-cover"
+          sizes="(max-width: 1024px) 90vw, 400px"
+        />
       </div>
 
       {/* Floating stat badge */}

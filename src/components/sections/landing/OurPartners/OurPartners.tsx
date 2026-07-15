@@ -5,7 +5,7 @@ import { Reveal } from '@/components/ui/Reveal';
 
 export function OurPartners() {
   return (
-    <section className="border-y border-border bg-surface-raised py-16">
+    <section className="section-light border-y border-border bg-surface-raised py-16">
       <div className="container-page">
         <Reveal>
           <p className="mb-2 text-center font-sans text-xs font-semibold tracking-widest text-primary uppercase">

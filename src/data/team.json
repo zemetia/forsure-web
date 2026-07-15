@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Yevo Cosuren",
-    "role": "CEO",
+    "role": "Founder & CEO",
     "photo": "/images/team/yevo-cosuren.png",
     "bio": "",
     "social": {
@@ -11,6 +11,14 @@
   },
   {
     "id": "2",
+    "name": "Verdian",
+    "role": "Co-Founder",
+    "photo": "/images/team/verdian.jpg",
+    "bio": "",
+    "social": {}
+  },
+  {
+    "id": "3",
     "name": "Alexander Fernaldi Kusumo",
     "role": "Project Manager",
     "photo": "/images/team/alexander-fernaldi-kusumo.png",
@@ -20,7 +28,7 @@
     }
   },
   {
-    "id": "3",
+    "id": "4",
     "name": "Heaven David William",
     "role": "Graphic Designer",
     "photo": "/images/team/heaven-david-william.png",
@@ -30,7 +38,7 @@
     }
   },
   {
-    "id": "4",
+    "id": "5",
     "name": "Maxwell Arlyn Delen Salim",
     "role": "Production House",
     "photo": "/images/team/maxwell-arlyn-delen-salim.png",
@@ -40,7 +48,7 @@
     }
   },
   {
-    "id": "5",
+    "id": "6",
     "name": "Pieter Setyawan",
     "role": "Videographer",
     "photo": "/images/team/pieter-setyawan.png",

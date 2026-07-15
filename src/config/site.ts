@@ -127,7 +127,7 @@ export const siteConfig: SiteConfig = {
     // ─── CEO / Founder ──────────────────────────────────────────────────────────
     ceo: {
       name: 'Yevo Cosuren',
-      role: 'CEO & Founder',
+      role: 'Founder & CEO',
       sameAs: ['https://instagram.com/forsure.ids'],
     },
 

@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Reveal } from '@/components/ui/Reveal';
+import { ClientMarquee } from '@/components/sections/landing/ClientMarquee';
 import { buildMetadata } from '@/lib/seo';
 import { siteConfig } from '@/config/site';
 import { serializeSchema, webPageSchema, breadcrumbSchema, faqSchema, localBusinessSchema } from '@/lib/structured-data';
@@ -210,6 +211,8 @@ export default async function ContactPage({ params }: Props) {
             </Reveal>
           </div>
         </section>
+
+        <ClientMarquee />
 
         {/* ── Bottom CTA (dark) ─────────────────────────────────────────── */}
         <section className="border-t border-border bg-surface">
