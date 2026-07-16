@@ -18,7 +18,7 @@ export function LocationMap() {
           <div className="overflow-hidden rounded-2xl border border-border">
             <iframe
               title={`Lokasi ${siteConfig.name}`}
-              src="https://www.google.com/maps?q=Forsure+Digitalindo&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.98!2d112.7808351!3d-7.2904835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df1446100fdb657%3A0x194938f61f7ea312!2sForsure%20Digitalindo!5e0!3m2!1sid!2sid!4v1700000000001!5m2!1sid!2sid"
               width="100%"
               height="420"
               style={{ border: 0, display: 'block', filter: 'invert(90%) hue-rotate(180deg)' }}
