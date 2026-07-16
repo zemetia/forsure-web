@@ -3,7 +3,7 @@ import { Camera, TrendingUp } from 'lucide-react';
 
 export function HeroVisual() {
   return (
-    <div className="relative flex h-full min-h-[420px] items-center justify-center lg:min-h-[560px]">
+    <div className="relative flex h-full min-h-[480px] items-center justify-center lg:min-h-[640px]">
       {/* Ambient glow */}
       <div
         aria-hidden="true"
@@ -15,14 +15,14 @@ export function HeroVisual() {
       />
 
       {/* Main photo frame */}
-      <div className="relative z-10 aspect-[3/2] w-full max-w-[460px] overflow-hidden rounded-2xl border border-border shadow-2xl">
+      <div className="relative z-10 aspect-[4/3] w-full max-w-[600px] overflow-hidden rounded-2xl border border-border shadow-2xl">
         <Image
           src="/images/hero/si-hero.jpg"
           alt="Tim Forsure Digitalindo bekerja di lapangan"
           fill
           priority
           className="object-cover"
-          sizes="(max-width: 1024px) 90vw, 400px"
+          sizes="(max-width: 1024px) 90vw, 560px"
         />
       </div>
 
