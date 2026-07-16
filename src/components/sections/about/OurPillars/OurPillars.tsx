@@ -26,7 +26,7 @@ export function OurPillars() {
   ] as const;
 
   return (
-    <section className="bg-background py-24">
+    <section className="section-light py-24">
       <div className="container-page">
         <Reveal className="mb-14 text-center">
           <p className="mb-4 text-sm font-medium tracking-[0.25em] text-primary uppercase">

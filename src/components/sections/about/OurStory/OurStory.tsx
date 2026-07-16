@@ -6,7 +6,7 @@ export function OurStory() {
   const t = useTranslations('about');
 
   return (
-    <section className="section-light py-24">
+    <section className="bg-background py-24">
       <div className="container-page">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
           {/* Text */}

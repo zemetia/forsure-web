@@ -11,7 +11,9 @@
   "filter": {
     "website": "Solusi Website",
     "creative": "Konten Kreatif",
-    "photoshoot": "Foto & Video"
+    "photoshoot": "Foto & Video",
+    "media": "Media Partner",
+    "makeup": "Make Up"
   },
   "sections": {
     "website": {
@@ -25,6 +27,16 @@
     "photoshoot": {
       "title": "Photoshoot Profesional",
       "subtitle": "Visual berkualitas tinggi yang merepresentasikan brand Anda dengan percaya diri."
+    },
+    "media": {
+      "title": "Media Partnership",
+      "subtitle": "Jaringan media nasional hingga regional untuk memperluas jangkauan publikasi brand Anda.",
+      "mediaLabel": "Media"
+    },
+    "makeup": {
+      "title": "Make Up Services",
+      "subtitle": "Jasa make up profesional untuk wisuda, pre-wedding, hingga hari pernikahan Anda.",
+      "terms": "Syarat & Ketentuan"
     }
   },
   "card": {

@@ -11,7 +11,9 @@
   "filter": {
     "website": "Website Solutions",
     "creative": "Creative Content",
-    "photoshoot": "Photoshoot"
+    "photoshoot": "Photoshoot",
+    "media": "Media Partner",
+    "makeup": "Make Up"
   },
   "sections": {
     "website": {
@@ -25,6 +27,16 @@
     "photoshoot": {
       "title": "Professional Photoshoot",
       "subtitle": "High-quality visuals that represent your brand with confidence."
+    },
+    "media": {
+      "title": "Media Partnership",
+      "subtitle": "A national-to-regional media network to extend your brand's publication reach.",
+      "mediaLabel": "Media"
+    },
+    "makeup": {
+      "title": "Make Up Services",
+      "subtitle": "Professional make up services for graduation, pre-wedding, and your big day.",
+      "terms": "Terms & Conditions"
     }
   },
   "card": {

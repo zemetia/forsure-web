@@ -7,6 +7,8 @@ import { ServiceHero } from '@/components/sections/services/ServiceHero';
 import { CategoryFilter } from '@/components/sections/services/CategoryFilter';
 import { ServiceSection } from '@/components/sections/services/ServiceSection';
 import { ServiceCTA } from '@/components/sections/services/ServiceCTA';
+import { MediaPartnerTiers } from '@/components/sections/services/MediaPartnerTiers';
+import { MakeupServices } from '@/components/sections/services/MakeupServices';
 import { ServiceCard } from '@/components/ui/ServiceCard';
 import { PricingTierGroup } from '@/components/ui/PricingTier';
 import { ClientMarquee } from '@/components/sections/landing/ClientMarquee';
@@ -59,6 +61,8 @@ export default async function ServicesPage({ params }: Props) {
     { id: 'website', label: t('filter.website'), anchor: 'website' },
     { id: 'creative', label: t('filter.creative'), anchor: 'creative' },
     { id: 'photoshoot', label: t('filter.photoshoot'), anchor: 'photoshoot' },
+    { id: 'media', label: t('filter.media'), anchor: 'media-partner' },
+    { id: 'makeup', label: t('filter.makeup'), anchor: 'makeup' },
   ];
 
   const pageUrl = `${siteConfig.url}/services`;
@@ -246,6 +250,22 @@ export default async function ServicesPage({ params }: Props) {
             />
           ))}
         </ServiceSection>
+
+        <MediaPartnerTiers
+          id="media-partner"
+          title={t('sections.media.title')}
+          subtitle={t('sections.media.subtitle')}
+          mediaLabel={t('sections.media.mediaLabel')}
+          className="bg-background"
+        />
+
+        <MakeupServices
+          id="makeup"
+          title={t('sections.makeup.title')}
+          subtitle={t('sections.makeup.subtitle')}
+          termsLabel={t('sections.makeup.terms')}
+          className="section-light"
+        />
 
         <ClientMarquee />
 
