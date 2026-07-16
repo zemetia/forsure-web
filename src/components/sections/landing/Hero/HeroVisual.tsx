@@ -14,41 +14,43 @@ export function HeroVisual() {
         }}
       />
 
-      {/* Main photo frame */}
-      <div className="relative z-10 aspect-[4/3] w-full max-w-[600px] overflow-hidden rounded-2xl border border-border shadow-2xl">
-        <Image
-          src="/images/hero/si-hero.jpg"
-          alt="Tim Forsure Digitalindo bekerja di lapangan"
-          fill
-          priority
-          className="object-cover"
-          sizes="(max-width: 1024px) 90vw, 560px"
-        />
-      </div>
-
-      {/* Floating stat badge */}
-      <div
-        aria-hidden="true"
-        className="animate-float absolute -right-4 top-8 z-20 flex items-center gap-2 rounded-xl border border-border bg-surface-overlay px-4 py-3 shadow-lg lg:-right-8"
-      >
-        <TrendingUp className="h-4 w-4 text-primary" />
-        <div>
-          <p className="text-xs font-semibold text-foreground">50+ Klien Puas</p>
-          <p className="text-[10px] text-foreground-muted">Indonesia</p>
+      {/* Main photo frame + overlay badges */}
+      <div className="relative z-10 aspect-[4/3] w-full max-w-[600px]">
+        <div className="absolute inset-0 overflow-hidden rounded-2xl border border-border shadow-2xl">
+          <Image
+            src="/images/hero/si-hero.jpg"
+            alt="Tim Forsure Digitalindo bekerja di lapangan"
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 1024px) 90vw, 560px"
+          />
         </div>
-      </div>
 
-      {/* Floating service badge */}
-      <div
-        aria-hidden="true"
-        className="animate-float-delayed absolute -left-4 bottom-12 z-20 flex items-center gap-2 rounded-xl border border-border bg-surface-overlay px-4 py-3 shadow-lg lg:-left-8"
-      >
-        <div className="h-8 w-8 rounded-lg bg-primary-subtle flex items-center justify-center">
-          <Camera className="h-4 w-4 text-primary" />
+        {/* Floating stat badge — overlays top-right corner of the photo */}
+        <div
+          aria-hidden="true"
+          className="animate-float absolute right-4 top-4 z-20 flex items-center gap-2 rounded-xl border border-border bg-surface-overlay px-4 py-3 shadow-lg"
+        >
+          <TrendingUp className="h-4 w-4 text-primary" />
+          <div>
+            <p className="text-xs font-semibold text-foreground">50+ Klien Puas</p>
+            <p className="text-[10px] text-foreground-muted">Indonesia</p>
+          </div>
         </div>
-        <div>
-          <p className="text-xs font-semibold text-foreground">Creative Studio</p>
-          <p className="text-[10px] text-foreground-muted">Photo · Video · Content</p>
+
+        {/* Floating service badge — overlays bottom-left corner of the photo */}
+        <div
+          aria-hidden="true"
+          className="animate-float-delayed absolute bottom-4 left-4 z-20 flex items-center gap-2 rounded-xl border border-border bg-surface-overlay px-4 py-3 shadow-lg"
+        >
+          <div className="h-8 w-8 rounded-lg bg-primary-subtle flex items-center justify-center">
+            <Camera className="h-4 w-4 text-primary" />
+          </div>
+          <div>
+            <p className="text-xs font-semibold text-foreground">Creative Studio</p>
+            <p className="text-[10px] text-foreground-muted">Photo · Video · Content</p>
+          </div>
         </div>
       </div>
     </div>
