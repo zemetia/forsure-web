@@ -31,7 +31,7 @@ export function MakeupServices({ id, title, subtitle, termsLabel, className }: M
             src="/images/portfolio/wedding/wedding-1.jpg"
             alt={title}
             fill
-            className="object-cover object-[center_28%]"
+            className="object-cover object-[center_28%] lg:object-[center_38%]"
             sizes="100vw"
           />
           <div
