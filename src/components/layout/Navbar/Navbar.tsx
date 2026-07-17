@@ -39,10 +39,10 @@ export function Navbar({ className }: NavbarProps) {
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-50 transition-all duration-300',
+        'fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/90 backdrop-blur-md transition-all duration-300',
         scrolled
-          ? 'border-b border-border/50 bg-background/90 backdrop-blur-md'
-          : 'bg-transparent',
+          ? 'md:border-b md:border-border/50 md:bg-background/90 md:backdrop-blur-md'
+          : 'md:border-b-0 md:bg-transparent md:backdrop-blur-none',
         className,
       )}
     >

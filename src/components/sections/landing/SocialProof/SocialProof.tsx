@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 
+import { SERVICES } from '@/data/services';
+
 interface StatItem {
   value: number;
   suffix: string;
@@ -11,7 +13,7 @@ interface StatItem {
 const STATS: StatItem[] = [
   { value: 50, suffix: '+', label: 'Klien Dilayani' },
   { value: 30, suffix: '+', label: 'Proyek Selesai' },
-  { value: 3, suffix: '', label: 'Kategori Layanan' },
+  { value: SERVICES.length, suffix: '', label: 'Pilihan Layanan' },
   { value: 100, suffix: '%', label: 'Klien Puas' },
 ];
 

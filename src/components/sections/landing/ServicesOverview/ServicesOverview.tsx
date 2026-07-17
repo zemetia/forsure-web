@@ -1,4 +1,4 @@
-import { Monitor, Palette, Camera, ArrowRight, Check } from 'lucide-react';
+import { Monitor, Palette, Camera, Newspaper, Sparkles, ArrowRight, Check } from 'lucide-react';
 
 import { Link } from '@/i18n/navigation';
 import { Reveal } from '@/components/ui/Reveal';
@@ -14,6 +14,23 @@ const CATEGORY_META: Record<
 };
 
 const CATEGORIES: ServiceCategory[] = ['website', 'creative', 'photoshoot'];
+
+const EXTRA_CATEGORIES = [
+  {
+    label: 'Media Partnership',
+    icon: Newspaper,
+    anchor: 'media-partner',
+    description:
+      'Jaringan media nasional hingga regional untuk memperluas jangkauan publikasi brand Anda — Kompas, Detik, CNN, CNBC, dan puluhan media lainnya.',
+  },
+  {
+    label: 'Make Up Services',
+    icon: Sparkles,
+    anchor: 'makeup',
+    description:
+      'Jasa make up profesional untuk wisuda, pre-wedding, hingga hari pernikahan Anda, lengkap dengan paket wedding & family.',
+  },
+];
 
 export function ServicesOverview() {
   return (
@@ -96,6 +113,30 @@ export function ServicesOverview() {
               </Reveal>
             );
           })}
+
+          {/* Extra categories without dedicated card data (media, makeup) */}
+          {EXTRA_CATEGORIES.map((category, i) => (
+            <Reveal key={category.anchor} delay={(CATEGORIES.length + i) * 80}>
+              <Link
+                href={`/services#${category.anchor}`}
+                className="group flex flex-col gap-4 rounded-xl border border-border bg-surface p-6 transition-all duration-200 hover:border-border-strong hover:bg-surface-raised sm:flex-row sm:items-center"
+              >
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary-subtle">
+                  <category.icon className="h-5 w-5 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="mb-1 font-sans text-xl font-semibold text-foreground">
+                    {category.label}
+                  </h3>
+                  <p className="text-sm text-foreground-muted">{category.description}</p>
+                </div>
+                <span className="inline-flex shrink-0 items-center gap-1.5 text-sm font-medium text-primary transition-colors group-hover:text-foreground">
+                  Lihat detail
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+            </Reveal>
+          ))}
         </div>
 
         {/* View all CTA */}
