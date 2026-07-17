@@ -39,7 +39,7 @@ export function Navbar({ className }: NavbarProps) {
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-background/90 backdrop-blur-md transition-all duration-300',
+        'fixed inset-x-0 top-0 z-50 border-b border-border/50 bg-surface-raised transition-all duration-300 md:bg-background/90 md:backdrop-blur-none',
         scrolled
           ? 'md:border-b md:border-border/50 md:bg-background/90 md:backdrop-blur-md'
           : 'md:border-b-0 md:bg-transparent md:backdrop-blur-none',
