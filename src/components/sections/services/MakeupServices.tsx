@@ -26,12 +26,12 @@ export function MakeupServices({ id, title, subtitle, termsLabel, className }: M
     <section id={id} className={`scroll-mt-32 py-20 ${className ?? ''}`} aria-labelledby={`section-${id}-title`}>
       <div className="container-page">
         {/* Hero photo with heading overlay */}
-        <Reveal className="relative mb-14 h-[280px] overflow-hidden rounded-lg border border-border sm:h-[360px] lg:h-[440px]">
+        <Reveal className="relative mb-14 aspect-[5/4] overflow-hidden rounded-lg border border-border">
           <Image
-            src="/images/portfolio/wedding/wedding-1.jpg"
+            src="/forsure make up.jpeg"
             alt={title}
             fill
-            className="object-cover object-[center_28%] lg:object-[center_38%]"
+            className="object-cover object-[center_73%]"
             sizes="100vw"
           />
           <div

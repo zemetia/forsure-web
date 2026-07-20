@@ -13,4 +13,5 @@ export const partners: PartnerItem[] = [
 { id: '6', name: "Depot LH",                    logo: '/partners/6.png' },
   { id: '7', name: 'KJT Care',                    logo: '/partners/7.png', darkBg: true },
   { id: '8', name: '1,000+ Clients',              logo: '/partners/8.png' },
+  { id: '9', name: 'Cosuren Group',               logo: '/partners/9.png' },
 ];

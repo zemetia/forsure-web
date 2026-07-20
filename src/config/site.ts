@@ -178,6 +178,8 @@ export const siteConfig: SiteConfig = {
       { label: 'Solusi Website', href: '/services#website' },
       { label: 'Konten Kreatif', href: '/services#creative' },
       { label: 'Foto & Video', href: '/services#photoshoot' },
+      { label: 'Media Partner', href: '/services#media-partner' },
+      { label: 'Make Up', href: '/services#makeup' },
     ],
   },
 
